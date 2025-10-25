@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clickly</title>
+<meta name="theme-color" content="#ffffff" id="theme-color">
+<meta name="msapplication-TileColor" content="#ffffff" id="tile-color">
+<meta name="apple-mobile-web-app-status-bar-style" content="default" id="status-bar-style">
+<meta name="msapplication-navbutton-color" content="#ffffff" id="nav-button-color">
+<meta name="apple-mobile-web-app-status-bar-style" content="default" id="status-bar-style">
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-status-bar-style" content="default" id="mobile-status-bar">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Clickly">
+<link rel="icon" type="image/x-icon" href="assets/imgs/favicon.ico">
+<link rel="shortcut icon" href="assets/imgs/favicon.ico">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js"></script>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-vazir min-h-screen transition-colors duration-300 dark:bg-gradient-to-br dark:from-gray-900 dark:to-black bg-gray-50 dark:text-white text-gray-900">
+
+<div id="preloader"><div class="loader"></div></div>
+
+<header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 dark:bg-card/95 border-b border-ring-light/50 dark:border-ring/50 shadow-lg">
+
+  <div class="flex items-center justify-between max-w-7xl mx-auto py-2 px-4">
+    <div id="header-content">
+      <div class="flex items-center gap-3 cursor-pointer" data-page="home2.html">
+        <img src="assets/imgs/logo.png" class="w-10 h-10 rounded-md shadow-md grid place-items-center" aria-hidden="true" />
+        <div>
+          <div class="text-sm text-muted-light dark:text-muted-dark">C l i c k l y</div>
+          <div class="text-lg font-extrabold">فروشگاه تو!</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex items-center gap-2">
+      <button style="display: none;" class="nav-item p-3 rounded-xl border border-ring-light dark:border-ring-dark bg-white dark:bg-card/80 hover:bg-gray-50 dark:hover:bg-card/60 transition-all flex items-center gap-2" title="سبد" data-page="cart.html">
+        <span class="min-w-[18px] h-[18px] px-1.5 rounded-full bg-brand text-black text-xs font-extrabold grid place-items-center" id="cartCount2">0</span>
+        سبد
+      </button>
+      <button class="flex flex-col px-3 pt-3 pb-2 rounded-xl hover:bg-gray-50 dark:hover:bg-card/60 transition-all" id="themeToggle" title="تغییر حالت">🌙</button>
+      <button class="flex flex-col gap-1 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-card/60" id="hamburgerBtn">
+        <div class="w-5 h-0.5 bg-gray-900 dark:bg-white rounded"></div>
+        <div class="w-5 h-0.5 bg-gray-900 dark:bg-white rounded"></div>
+        <div class="w-5 h-0.5 bg-gray-900 dark:bg-white rounded"></div>
+      </button>
+  </div>
+</header>
+
+
+<div class="fixed inset-0 bg-black/60 z-40 opacity-0 pointer-events-none transition-all duration-300" id="sidebarOverlay"></div>
+<nav class="fixed top-0 right-0 w-80 h-screen bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-l border-gray-200/50 dark:border-gray-700/50 z-50 overflow-y-auto shadow-2xl" id="sidebar">
+  <div class="relative p-6 border-b border-gray-200/50 dark:border-gray-700/50 bg-gradient-to-l from-brand/5 to-transparent">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand to-brand-2 shadow-lg flex items-center justify-center">
+        <img src="assets/imgs/logo.png" class="w-8 h-8 rounded-lg" alt="Clickly" />
+      </div>
+      <div>
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Clickly</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">فروشگاه آنلاین</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-1">
+    <div class="mb-1">
+      <button data-toggle="MenuHome" class="w-full text-right flex items-center justify-between gap-3 px-4 py-2 hover:bg-gradient-to-l hover:from-brand/10 hover:to-brand-2/5 transition-all duration-300 group">
+        <span class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <img src="assets/imgs/home.svg" class="w-5 h-5 brightness-0 invert" />
+          </div>
+          <span class="font-semibold text-gray-800 dark:text-gray-200">خانه و وبلاگ</span>
+        </span>
+        <svg class="toggle-arrow w-5 h-5 transition-all duration-300 text-gray-400 group-hover:text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    
+      <ul id="MenuHome" class="hidden flex-col mt-2 mx-4 rounded-xl bg-gray-50/50 dark:bg-gray-800/30 overflow-hidden">
+        <li><a href="#" data-page="home2.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">صفحه نخست 1</a></li>
+        <li><a href="#" data-page="home.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">صفحه نخست 2</a></li>
+        <li class="border-t border-gray-200/50 dark:border-gray-700/50 my-1"></li>
+        <li><a href="#" data-page="blog.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">وبلاگ 1</a></li>
+        <li><a href="#" data-page="blog2.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">وبلاگ 2</a></li>
+        <li><a href="#" data-page="post.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">صفحه پست</a></li>
+      </ul>
+    </div>
+    
+    <div class="mb-1">
+      <button data-toggle="MenuPayment" class="w-full text-right flex items-center justify-between gap-3 px-4 py-2 hover:bg-gradient-to-l hover:from-brand/10 hover:to-brand-2/5 transition-all duration-300 group">
+        <span class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-green-600 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <img src="assets/imgs/cart.svg" class="w-5 h-5 brightness-0 invert" />
+          </div>
+          <span class="font-semibold text-gray-800 dark:text-gray-200">خرید و پرداخت</span>
+        </span>
+        <svg class="toggle-arrow w-5 h-5 transition-all duration-300 text-gray-400 group-hover:text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    
+      <ul id="MenuPayment" class="hidden flex-col mt-2 mx-4 rounded-xl bg-gray-50/50 dark:bg-gray-800/30 overflow-hidden">
+        <li><a href="#" data-page="cart.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">سبد خرید 1</a></li>
+        <li><a href="#" data-page="cart2.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">سبد خرید 2</a></li>
+        <li><a href="#" data-page="cart3.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">سبد خرید خالی</a></li>
+        <li><a href="#" data-page="payment_method.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">روش های پرداخت</a></li>
+        <li><a href="#" data-page="payment_method2.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">کارت های بانکی</a></li>
+        <li><a href="#" data-page="near.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">فروشگاه های نزدیک</a></li>
+      </ul>
+    </div>
+
+    <div class="mb-1">
+      <button data-toggle="MenuOrders" class="w-full text-right flex items-center justify-between gap-3 px-4 py-2 hover:bg-gradient-to-l hover:from-brand/10 hover:to-brand-2/5 transition-all duration-300 group">
+        <span class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <img src="assets/imgs/card.svg" class="w-5 h-5 brightness-0 invert" />
+          </div>
+          <span class="font-semibold text-gray-800 dark:text-gray-200">سفارشات</span>
+        </span>
+        <svg class="toggle-arrow w-5 h-5 transition-all duration-300 text-gray-400 group-hover:text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <ul id="MenuOrders" class="hidden flex-col mt-2 mx-4 rounded-xl bg-gray-50/50 dark:bg-gray-800/30 overflow-hidden">
+        <li><a href="#" data-page="orders.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دمو 1</a></li>
+        <li><a href="#" data-page="orders2.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دمو 2</a></li>
+      </ul>
+    </div>
+
+    <div class="mb-1">
+      <button data-toggle="MenuAllProducts" class="w-full text-right flex items-center justify-between gap-3 px-4 py-2 hover:bg-gradient-to-l hover:from-brand/10 hover:to-brand-2/5 transition-all duration-300 group">
+        <span class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <img src="assets/imgs/product.svg" class="w-5 h-5 brightness-0 invert" />
+          </div>
+          <span class="font-semibold text-gray-800 dark:text-gray-200">همه محصولات</span>
+        </span>
+        <svg class="toggle-arrow w-5 h-5 transition-all duration-300 text-gray-400 group-hover:text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <ul id="MenuAllProducts" class="hidden flex-col mt-2 mx-4 rounded-xl bg-gray-50/50 dark:bg-gray-800/30 overflow-hidden">
+        <li><a href="#" data-page="all.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دمو 1</a></li>
+        <li><a href="#" data-page="all2.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دمو 2</a></li>
+        <li><a href="#" data-page="all3.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دمو 3</a></li>
+        <li><a href="#" data-page="all4.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دمو 4</a></li>
+        <li><a href="#" data-page="all5.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دمو 5</a></li>
+        <li><a href="#" data-page="product.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">صفحه محصول</a></li>
+        <li><a href="#" data-page="cats.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دسته بندی محصولات</a></li>
+      </ul>
+    </div>
+
+    <div class="mb-1">
+      <button data-toggle="MenuAccount" class="w-full text-right flex items-center justify-between gap-3 px-4 py-2 hover:bg-gradient-to-l hover:from-brand/10 hover:to-brand-2/5 transition-all duration-300 group">
+        <span class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <img src="assets/imgs/user.svg" class="w-5 h-5 brightness-0 invert" />
+          </div>
+          <span class="font-semibold text-gray-800 dark:text-gray-200">حساب کاربری</span>
+        </span>
+        <svg class="toggle-arrow w-5 h-5 transition-all duration-300 text-gray-400 group-hover:text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <ul id="MenuAccount" class="hidden flex-col mt-2 mx-4 rounded-xl bg-gray-50/50 dark:bg-gray-800/30 overflow-hidden">
+        <li><a href="#" data-page="profile.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">پروفایل 1</a></li>
+        <li><a href="#" data-page="profile2.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">پروفایل 2</a></li>
+        <li><a href="#" data-page="profile3.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">پروفایل 3</a></li>
+        <li><a href="#" data-page="edit-profile.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">ویرایش پروفایل</a></li>
+        <li><a href="#" data-page="login.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">فرم ورود</a></li>
+        <li><a href="#" data-page="register.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">فرم ثبت نام</a></li>
+        <li><a href="#" data-page="forget.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">فرم تغییر رمز عبور</a></li>
+        <li><a href="#" data-page="otp.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">فرم OTP</a></li>
+        <li><a href="#" data-page="address.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">تغییر آدرس پیشفرض</a></li>
+      <li><a href="#" data-page="address2.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">تغییر آدرس پیشفرض 2</a></li>
+      </ul>
+    </div>
+
+    <div class="mb-1">
+      <button data-toggle="MenuFav" class="w-full text-right flex items-center justify-between gap-3 px-4 py-2 hover:bg-gradient-to-l hover:from-brand/10 hover:to-brand-2/5 transition-all duration-300 group">
+        <span class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500 to-red-600 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <img src="assets/imgs/favorite.svg" class="w-5 h-5 brightness-0 invert" />
+          </div>
+          <span class="font-semibold text-gray-800 dark:text-gray-200">علاقه مندی ها</span>
+        </span>
+        <svg class="toggle-arrow w-5 h-5 transition-all duration-300 text-gray-400 group-hover:text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <ul id="MenuFav" class="hidden flex-col mt-2 mx-4 rounded-xl bg-gray-50/50 dark:bg-gray-800/30 overflow-hidden">
+        <li><a href="#" data-page="fav.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دمو 1</a></li>
+        <li><a href="#" data-page="fav2.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دمو 2</a></li>
+        <li><a href="#" data-page="fav3.html" class="block px-6 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/50 hover:text-brand transition-all duration-200 border-r-3 border-transparent hover:border-brand">دمو 3 (لیست خالی)</a></li>
+      </ul>
+    </div>
+
+    <div class="space-y-1 mt-2 pt-2 border-t border-gray-200/50 dark:border-gray-700/50">
+      <a href="#" data-page="contact.html" class="flex items-center gap-4 px-4 py-2 hover:bg-gradient-to-l hover:from-brand/10 hover:to-brand-2/5 transition-all duration-300 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <img src="assets/imgs/support.svg" class="w-5 h-5 brightness-0 invert" />
+        </div>
+        <span class="font-semibold text-gray-800 dark:text-gray-200">تماس با ما</span>
+      </a>
+      <a href="#" data-page="about.html" class="flex items-center gap-4 px-4 py-2 hover:bg-gradient-to-l hover:from-brand/10 hover:to-brand-2/5 transition-all duration-300 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gray-500 to-gray-600 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <img src="assets/imgs/info.svg" class="w-5 h-5 brightness-0 invert" />
+        </div>
+        <span class="font-semibold text-gray-800 dark:text-gray-200">درباره ما</span>
+      </a>
+    </div>
+  </div>
+
+</nav>
+
+<main class="max-w-7xl mx-auto py-4 pb-20 min-h-[calc(100vh-3.5rem)] px-0 mx-0 pr-4" id="ajax-content">
+  
+</main>
+
+<nav class="fixed bottom-0 inset-x-0 h-14 bg-white/95 dark:bg-card/95 backdrop-blur-md border-t border-b border-ring-light/50 dark:border-ring/50 grid grid-cols-4 items-center z-40" aria-label="ناوبری پایین">
+
+  <a class="nav-item flex flex-col items-center gap-0.5 text-sm text-muted-light dark:text-muted hover:text-gray-900 dark:hover:text-white transition-colors group active:text-brand" href="#" data-page="home2.html">
+    <span class="group-[.active]:scale-110 transition-transform"><img src="assets/imgs/home.svg" class="w-[20px] h-[20px] brightness-50 dark:brightness-75 group-[.active]:brightness-100 dark:group-[.active]:brightness-110" /></span>
+    <span>خانه</span>
+  </a>
+  <a class="nav-item flex flex-col items-center gap-0.5 text-sm text-muted-light dark:text-muted hover:text-gray-900 dark:hover:text-white transition-colors group" href="#" data-page="cart.html">
+    <span class="group-[.active]:scale-110 transition-transform"><img src="assets/imgs/cart.svg" class="w-[20px] h-[20px] brightness-50 dark:brightness-75 group-[.active]:brightness-100 dark:group-[.active]:brightness-110" /></span>
+    <span>سبد خرید</span>
+  </a>
+  <a class="nav-item flex flex-col items-center gap-0.5 text-sm text-muted-light dark:text-muted hover:text-gray-900 dark:hover:text-white transition-colors group" href="#" data-page="fav.html">
+    <span class="group-[.active]:scale-110 transition-transform"><img src="assets/imgs/favorite.svg" class="w-[20px] h-[20px] brightness-50 dark:brightness-75 group-[.active]:brightness-100 dark:group-[.active]:brightness-110" /></span>
+    <span>مورد علاقه</span>
+  </a>
+  <a class="nav-item flex flex-col items-center gap-0.5 text-sm text-muted-light dark:text-muted hover:text-gray-900 dark:hover:text-white transition-colors group" href="#" data-page="profile.html">
+    <span class="group-[.active]:scale-110 transition-transform"><img src="assets/imgs/user.svg" class="w-[20px] h-[20px] brightness-50 dark:brightness-75 group-[.active]:brightness-100 dark:group-[.active]:brightness-110" /></span>
+    <span>پروفایل</span>
+  </a>
+</nav>
+
+<div id="exitModal" class="fixed inset-0 bg-black/50 z-[60] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+  <div class="bg-white dark:bg-card rounded-2xl p-6 max-w-sm w-full shadow-2xl transform scale-95 transition-transform duration-300">
+    <div class="text-center">
+      <div class="w-16 h-16 mx-auto mb-4 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center">
+        <svg class="w-8 h-8 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-bold mb-2">خروج از برنامه</h3>
+      <p class="text-muted-light dark:text-muted-dark mb-6">آیا مطمئن هستید که می‌خواهید از برنامه خارج شوید؟</p>
+      
+      <div class="flex gap-3">
+        <button id="exitCancel" class="flex-1 px-4 py-2 rounded-xl border border-ring-light dark:border-ring text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-card/60 transition-colors">
+          انصراف
+        </button>
+        <button id="exitConfirm" class="flex-1 px-4 py-2 rounded-xl bg-red-600 text-white hover:bg-red-700 transition-colors">
+          خروج
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/service-worker.js"></script>
+</body>
+</html>

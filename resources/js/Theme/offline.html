@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>اتصال اینترنت قطع است - Clickly</title>
+    <meta name="theme-color" content="#ffffff" id="theme-color">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#ff693b',
+                    },
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-background min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-md w-full text-center">
+        <div class="bg-white dark:bg-card rounded-2xl shadow-lg p-8">
+            <div class="w-24 h-24 mx-auto mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">اتصال اینترنت قطع است</h1>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">به نظر می‌رسد اتصال اینترنت شما قطع شده است. لطفاً اتصال خود را بررسی کرده و دوباره تلاش کنید.</p>
+            <button data-page="index.html" class="bg-brand text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors">بازگشت به صفحه اصلی</button>
+        </div>
+        <p class="mt-6 text-sm text-gray-500 dark:text-gray-400">Clickly - کلیکی</p>
+    </div>
+
+    <script>
+        // Auto retry every 30 seconds
+        setInterval(() => {
+            fetch(window.location.href, { method: 'HEAD' })
+                .then(() => window.location.reload())
+                .catch(() => {});
+        }, 30000);
+
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.getElementById('theme-color').setAttribute('content', '#1a1a1a');
+        } else {
+            document.documentElement.classList.remove('dark');
+            document.getElementById('theme-color').setAttribute('content', '#ffffff');
+        }
+    </script>
+</body>
+</html>

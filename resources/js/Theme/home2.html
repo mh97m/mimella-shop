@@ -1,0 +1,1004 @@
+<div class="container mx-auto px-0 mx-0 pb-2">
+   <div class="pl-4">
+  <img data-page="all2.html" src="assets/imgs/banner.jpg" class="relative mx-auto w-full max-w-3xl h-50 md:h-80 lg:h-96 justify-center overflow-hidden rounded-xl shadow hover:shadow-md bg-white mb-4 cursor-pointer">
+</div>
+
+  <div id="pwa-banner-container" class="pl-4 mb-4"></div>
+  <div class="grid grid-cols-5 gap-4 mb-4 justify-center mx-auto max-w-fit pl-4">
+    <a href="#" data-page="cats.html"><img src="assets/imgs/c1.jpg" class="max-w-[65px] min-w-[65px] bg-gradient-to-r hover:shadow-md from-brand to-brand-2 rounded-full grid place-items-center text-xl text-white" /></a>
+    <a href="#" data-page="cats.html"><img src="assets/imgs/c2.jpg" class="max-w-[65px] min-w-[65px] bg-gradient-to-r hover:shadow-md from-brand to-brand-2 rounded-full grid place-items-center text-xl text-white" /></a>
+    <a href="#" data-page="cats.html"><img src="assets/imgs/c3.jpg" class="max-w-[65px] min-w-[65px] bg-gradient-to-r hover:shadow-md from-brand to-brand-2 rounded-full grid place-items-center text-xl text-white" /></a>
+    <a href="#" data-page="cats.html"><img src="assets/imgs/c4.jpg" class="max-w-[65px] min-w-[65px] bg-gradient-to-r hover:shadow-md from-brand to-brand-2 rounded-full grid place-items-center text-xl text-white" /></a>
+    <a href="#" data-page="cats.html"><img src="assets/imgs/c5.jpg" class="max-w-[65px] min-w-[65px] bg-gradient-to-r hover:shadow-md from-brand to-brand-2 rounded-full grid place-items-center text-xl text-white" /></a>
+  </div>
+  
+  <h1 class="text-3xl md:text-4xl font-extrabold mb-6 text-center text-gray-800 dark:text-white pl-4" style="display: none;">امروز چی بخریم؟</h1>
+  <div class="w-full mb-6 pl-4">
+    <input 
+      type="text" 
+      placeholder="جستجو در محصولات..." 
+      class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand shadow-sm"
+    />
+  </div>
+
+ <div class="flex gap-2 overflow-x-auto pb-6 scrollbar-hide hidden" id="tabs">
+  <button class="tab px-4 py-2 rounded-xl border border-ring-light dark:border-ring bg-brand text-white font-semibold text-sm whitespace-nowrap transition-all active" data-category="all">همه</button>
+  <button class="tab px-4 py-2 rounded-xl border border-ring-light dark:border-ring bg-white dark:bg-card/80 text-muted-light dark:text-muted font-semibold text-sm whitespace-nowrap transition-all" data-category="mobile">موبایل</button>
+  <button class="tab px-4 py-2 rounded-xl border border-ring-light dark:border-ring bg-white dark:bg-card/80 text-muted-light dark:text-muted font-semibold text-sm whitespace-nowrap transition-all" data-category="pc">کامپیوتر و لپ تاپ</button>
+  <button class="tab px-4 py-2 rounded-xl border border-ring-light dark:border-ring bg-white dark:bg-card/80 text-muted-light dark:text-muted font-semibold text-sm whitespace-nowrap transition-all" data-category="sport">ورزشی</button>
+  <button class="tab px-4 py-2 rounded-xl border border-ring-light dark:border-ring bg-white dark:bg-card/80 text-muted-light dark:text-muted font-semibold text-sm whitespace-nowrap transition-all" data-category="food">مواد غذایی</button>
+</div>
+<div class="flex justify-between items-center mb-4">
+  <h2 class="text-2xl font-bold text-gray-800 dark:text-white">محبوب‌ترین‌ها</h2>
+  <a href="#" data-page="all.html" class="text-brand font-semibold text-sm hover:underline pl-4">مشاهده همه</a>
+</div>
+  <div class="flex gap-2 overflow-x-auto pb-4 scrollbar-hide scroll-smooth carousel" id="popular-carousel">
+    <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="mobile">
+      <img src="assets/imgs/p1.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+      
+      <h3 class="font-bold mb-1.5">گوشی اپل iPhone 16 Pro Max ZAA</h3>
+      
+      <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+        <span>ظرفیت: 1T</span>
+        <span>•</span>
+        <span>رم: 8 Gb</span>
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+        <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="گوشی اپل iPhone 16 Pro Max ZAA 1 ترابایت با رم 8">+</button>
+      </div>
+    </article>
+    
+    <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="mobile">
+      <img src="assets/imgs/p2.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+      
+      <h3 class="font-bold mb-1.5">گوشی سامسونگ Galaxy Z Fold 7</h3>
+      
+      <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+        <span>ظرفیت: 1T</span>
+        <span>•</span>
+        <span>رم: 16 Gb</span>
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+        <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="گوشی موبایل سامسونگ مدل Galaxy Z Fold 7 دو سیم‌کارت ظرفیت 1 ترابایت و رم 16 گیگابایت">+</button>
+      </div>
+    </article>
+
+    <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="pc">
+      <img src="assets/imgs/p4.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+      
+      <h3 class="font-bold mb-1.5">لپ تاپ 16 اینچی ایسوس GU605CX-Core</h3>
+      
+      <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+        <span>SSD: 1T</span>
+        <span>•</span>
+        <span>رم: 16 Gb</span>
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+        <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="لپ تاپ 16 اینچی ایسوس GU605CX-Core">+</button>
+      </div>
+    </article>
+
+    <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="sport">
+      <img src="assets/imgs/p7.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+      
+      <h3 class="font-bold mb-1.5">ست تی‌شرت و شلوارک ورزشی</h3>
+      
+      <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+        <span>اندازه: XL</span>
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+        <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="ست تی‌شرت و شلوارک ورزشی">+</button>
+      </div>
+    </article>
+
+    <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="food">
+      <img src="assets/imgs/p8.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+      
+      <h3 class="font-bold mb-1.5">چای سبز کیسه ای ویژه 3 بسته</h3>
+      
+      <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+        <span>تعداد: 25</span>
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+        <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="چای سبز کیسه ای با طعم لیمو ، چای سیاه کیسه ای ویژه و چای سیاه کیسه ای با طعم هل ممتاز مسما 3 بسته 25 عددی">+</button>
+      </div>
+    </article>
+
+    <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="mobile">
+      <img src="assets/imgs/p3.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+      
+      <h3 class="font-bold mb-1.5">گوشی اپل iPhone 16 CH</h3>
+      
+      <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+        <span>ظرفیت: 256Gb</span>
+        <span>•</span>
+        <span>رم: 8Gb</span>
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+        <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="گوشی اپل iPhone 16 CH رجیستر‌شده دو سیم‌کارت 256 گیگابایت با رم 8 گیگابایت">+</button>
+      </div>
+    </article>
+
+    <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="food">
+      <img src="assets/imgs/p9.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+      
+      <h3 class="font-bold mb-1.5">کاپوچینو بسته 20 عددی</h3>
+      
+      <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+        <span>تعداد: 20</span>
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+        <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="کاپوچینو - 25 گرم بسته 20 عددی">+</button>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<div class=" mb-6 -mr-2 w-full">
+  <div class="bg-gradient-to-r from-red-500 via-red-400 to-red-600 rounded-2xl p-4 text-white relative overflow-hidden border-4 border-red-400 px-1">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-2 right-2 w-16 h-16 border-2 border-white rounded-full"></div>
+      <div class="absolute bottom-2 left-2 w-12 h-12 border-2 border-white rounded-full"></div>
+      <div class="absolute top-1/2 left-1/3 w-6 h-6 bg-white rounded-full"></div>
+      <div class="absolute top-1/4 right-1/4 w-4 h-4 bg-white rounded-full"></div>
+    </div>
+
+    <div class="relative z-10 flex">
+      <div class="flex flex-col items-center justify-center gap-4 bg-white/10 rounded-xl p-2 min-w-[80px] max-w-[80px] h-[280px]">
+        <div class="flex flex-col items-center text-center w-full">
+          <h2 class="text-4xl font-bold opacity-90">%</h2>
+          <h2 class="text-sm font-bold mb-1">پیشنهاد</h2>
+          <h2 class="text-sm font-bold mb-2">شگفت‌انگیز</h2>
+          <a href="#" data-page="all2.html" class="text-sm font-bold mt-2 hidden">مشاهده همه</a>
+        </div>
+      
+      </div>
+      
+      <div class="flex gap-1 overflow-x-auto scrollbar-hide flex-1 mr-1 scroll-smooth carousel" id="special2-carousel">
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p1.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            ۴۵٪
+          </div>
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">لپ تاپ ایسوس Gaming X15</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۲,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۹,۲۰۰,۰۰۰</span></strong>
+
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p2.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            ۴۵٪
+          </div>
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">هدفون بلوتوثی Sony WH-1000XM4</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲,۸۵۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۵,۲۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p3.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            ۲۰٪
+          </div>
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">گوشی موبایل سامسونگ Galaxy S23</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۸,۴۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۲۳,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p4.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            ۵۰٪
+          </div>
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">ساعت هوشمند Apple Watch Series 8</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۷,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۵,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p5.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            ۳۰٪
+          </div>
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">تبلت اپل iPad Pro 12.9 اینچ</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲۱,۰۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۳۰,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p1.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            ۳۵٪
+          </div>
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">لپ تاپ ایسوس Gaming X15</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۲,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۹,۲۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p2.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            ۴۵٪
+          </div>
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">هدفون بلوتوثی Sony WH-1000XM4</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲,۸۵۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۵,۲۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p3.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            ۲۰٪
+          </div>
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">گوشی موبایل سامسونگ Galaxy S23</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۸,۴۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۲۳,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p4.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            ۵۰٪
+          </div>
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">ساعت هوشمند Apple Watch Series 8</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۷,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۵,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p5.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            ۳۰٪
+          </div>
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">تبلت اپل iPad Pro 12.9 اینچ</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲۱,۰۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۳۰,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <div class="flex-shrink-0 w-48 bg-white/10 border-2 border-white/20 rounded-xl p-4 flex flex-col items-center justify-center text-center max-w-[160px] min-w-[160px]" data-page="all.html">
+          <div class="w-12 h-12 bg-white/20 rounded-full grid place-items-center mb-3">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </div>
+          <span class="text-sm font-semibold">مشاهده همه</span>
+          <span class="text-xs text-white/80">پیشنهادات شگفت‌ انگیز</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="mb-6 pl-4">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">دسته بندی ها</h2>
+    <a href="#" data-page="cats.html" class="text-brand font-semibold text-sm hover:underline">مشاهده همه</a>
+  </div>
+  
+  <div class="grid grid-cols-2 gap-4">
+    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:shadow-lg transition-all cursor-pointer" data-page="cats.html">
+      <div class="w-12 h-12 bg-gradient-to-r from-brand to-brand-2 rounded-xl mx-auto mb-3 flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="2" width="12" height="20" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="19" r="1" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>        
+      </div>
+      <h3 class="font-semibold text-sm mb-1">موبایل</h3>
+      <p class="text-xs text-muted-light dark:text-muted">۱۸ محصول</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:shadow-lg transition-all cursor-pointer" data-page="cats.html">
+      <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl mx-auto mb-3 flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16l-2 16H6L4 4z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 4l4 4h8l4-4"/>
+        </svg>        
+      </div>
+      <h3 class="font-semibold text-sm mb-1">لباس ورزشی</h3>
+      <p class="text-xs text-muted-light dark:text-muted">۱۲ محصول</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:shadow-lg transition-all cursor-pointer" data-page="cats.html">
+      <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl mx-auto mb-3 flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C11 2 10 3 10 4s1 2 2 2 2-1 2-2-1-2-2-2zM16 6c-1.1 0-2 .9-2 2 0 1.1.9 2 2 2s2-.9 2-2c0-1.1-.9-2-2-2zm-8 0C6.9 6 6 6.9 6 8c0 1.1.9 2 2 2s2-.9 2-2c0-1.1-.9-2-2-2zM12 6c-3 0-5 3-5 6 0 4 5 10 5 10s5-6 5-10c0-3-2-6-5-6z"/>
+        </svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">مواد غذایی</h3>
+      <p class="text-xs text-muted-light dark:text-muted">۲۵ محصول</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:shadow-lg transition-all cursor-pointer" data-page="cats.html">
+      <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl mx-auto mb-3 flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v12H3z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M1 17h22" />
+        </svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">لپ‌تاپ</h3>
+      <p class="text-xs text-muted-light dark:text-muted">۹ محصول</p>
+    </div>
+  </div>
+</section>
+
+  <div class="mb-6 pl-4" style="display: none;">
+    <div data-page="all3.html" class="bg-gradient-to-r from-red-500 to-red-800 rounded-3xl p-8 text-center text-white shadow hover:shadow-md transition-all cursor-pointer">
+      <h2 class="text-2xl font-bold mb-2">% پیشنهاد ویژه امروز %</h2>
+      <p class="text-md font-medium">یک تجربه بی‌نظیر با طعم‌های تازه و داغ!</p>
+    </div>
+  </div>
+
+  <section class="mb-4">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-bold text-gray-800 dark:text-white">پیشنهاد ویژه</h2>
+      <a href="#" data-page="all.html" class="text-brand font-semibold text-sm hover:underline pl-4">مشاهده همه</a>
+    </div>
+    <div class="relative">
+      <div class="flex gap-2 overflow-x-auto pb-4 scrollbar-hide scroll-smooth carousel" id="special-carousel">
+
+        <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="pc">
+          <img src="assets/imgs/p5.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+          
+          <h3 class="font-bold mb-1.5">لپ تاپ 16 اینچی ایسوس ROG Strix G16</h3>
+          
+          <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+            <span>SSD: 1T</span>
+            <span>•</span>
+            <span>رم: 16 Gb</span>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+            <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="لپ تاپ 16 اینچی ایسوس ROG Strix G16">+</button>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="sport">
+          <img src="assets/imgs/p6.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+          
+          <h3 class="font-bold mb-1.5">تی شرت ورزشی آستین کوتاه</h3>
+          
+          <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+            <span>اندازه: L</span>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+            <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="تی شرت ورزشی آستین کوتاه">+</button>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="mobile">
+          <img src="assets/imgs/p3.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+          
+          <h3 class="font-bold mb-1.5">گوشی اپل iPhone 16 CH</h3>
+          
+          <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+            <span>ظرفیت: 256Gb</span>
+            <span>•</span>
+            <span>رم: 8Gb</span>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+            <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="گوشی اپل iPhone 16 CH رجیستر‌شده دو سیم‌کارت 256 گیگابایت با رم 8 گیگابایت">+</button>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="sport">
+          <img src="assets/imgs/p7.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+          
+          <h3 class="font-bold mb-1.5">ست تی‌شرت و شلوارک ورزشی</h3>
+          
+          <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+            <span>اندازه: XL</span>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+            <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="ست تی‌شرت و شلوارک ورزشی">+</button>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[200px] min-w-[200px] p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800" data-category="food">
+          <img src="assets/imgs/p10.webp" class="w-full h-40 object-fit rounded-xl mb-3" />
+          
+          <h3 class="font-bold mb-1.5">روغن مایع آفتابگردان و کانولا</h3>
+          
+          <div class="flex items-center gap-2 text-xs text-muted-light dark:text-muted mb-2">
+            <span>حجم: 1.5 لیتر</span>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <strong class="text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">450,000</strong>
+            <button class="w-8 h-8 rounded-full bg-brand text-white font-bold text-xl grid place-items-center shadow-md shadow-brand/30 hover:scale-110 transition-transform add" data-name="روغن مایع آفتابگردان و کانولا ورژن - 1.5 لیتر">+</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="mb-6 flex justify-center pl-4">
+    <img data-page="all3.html" 
+         src="assets/imgs/b1.webp" 
+         class="rounded-3xl shadow hover:shadow-md transition-all cursor-pointer" />
+  </div>
+
+  <div class=" mb-6 -mr-2 w-full">
+  <div class="bg-gradient-to-r from-green-500 via-green-400 to-green-600 rounded-2xl p-4 text-white relative overflow-hidden border-4 border-green-400 px-1">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-2 right-2 w-16 h-16 border-2 border-white rounded-full"></div>
+      <div class="absolute bottom-2 left-2 w-12 h-12 border-2 border-white rounded-full"></div>
+      <div class="absolute top-1/2 left-1/3 w-6 h-6 bg-white rounded-full"></div>
+      <div class="absolute top-1/4 right-1/4 w-4 h-4 bg-white rounded-full"></div>
+    </div>
+
+    <div class="relative z-10 flex">
+      <div class="flex flex-col items-center justify-center gap-4 bg-white/10 rounded-xl p-2 min-w-[80px] max-w-[80px] h-[280px]">
+        <div class="flex flex-col items-center text-center w-full">
+          <h2 class="text-4xl font-bold opacity-90"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" stroke-miterlimit="1.5" d="M8 19a2 2 0 1 0 0-4a2 2 0 0 0 0 4m10 0a2 2 0 1 0 0-4a2 2 0 0 0 0 4"/><path d="M10.05 17H15V6.6a.6.6 0 0 0-.6-.6H1m4.65 11H3.6a.6.6 0 0 1-.6-.6v-4.9"/><path stroke-linejoin="round" d="M2 9h4"/><path d="M15 9h5.61a.6.6 0 0 1 .548.356l1.79 4.028a.6.6 0 0 1 .052.243V16.4a.6.6 0 0 1-.6.6h-1.9M15 17h1"/></g></svg></h2>
+          <h2 class="text-lg font-bold mb-1">ارسال</h2>
+          <h2 class="text-lg font-bold mb-2">رایگان</h2>
+          <a href="#" data-page="all2.html" class="text-sm font-bold mt-2 hidden">مشاهده همه</a>
+        </div>
+      
+      </div>
+      
+      <div class="flex gap-1 overflow-x-auto scrollbar-hide flex-1 mr-1 scroll-smooth carousel" id="special2-carousel">
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p1.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">لپ تاپ ایسوس Gaming X15</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۲,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۹,۲۰۰,۰۰۰</span></strong>
+
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p2.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">هدفون بلوتوثی Sony WH-1000XM4</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲,۸۵۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۵,۲۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p3.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">گوشی موبایل سامسونگ Galaxy S23</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۸,۴۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۲۳,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p4.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">ساعت هوشمند Apple Watch Series 8</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۷,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۵,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p5.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">تبلت اپل iPad Pro 12.9 اینچ</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲۱,۰۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۳۰,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p1.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">لپ تاپ ایسوس Gaming X15</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۲,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۹,۲۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p2.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">هدفون بلوتوثی Sony WH-1000XM4</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲,۸۵۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۵,۲۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p3.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">گوشی موبایل سامسونگ Galaxy S23</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۸,۴۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۲۳,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p4.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">ساعت هوشمند Apple Watch Series 8</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۷,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۵,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p5.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">تبلت اپل iPad Pro 12.9 اینچ</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲۱,۰۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۳۰,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <div class="flex-shrink-0 w-48 bg-white/10 border-2 border-white/20 rounded-xl p-4 flex flex-col items-center justify-center text-center max-w-[160px] min-w-[160px]" data-page="all.html">
+          <div class="w-12 h-12 bg-white/20 rounded-full grid place-items-center mb-3">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </div>
+          <span class="text-sm font-semibold">مشاهده همه</span>
+          <span class="text-xs text-white/80">ارسال های رایگان</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <section class="mb-6 pl-4">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-bold text-gray-800 dark:text-white">مجموعه محصولات</h2>
+      <a href="#" data-page="all2.html" class="text-brand font-semibold text-sm hover:underline">مشاهده همه</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center gap-3 p-4 shadow hover:shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-all cursor-pointer">
+        <img src="assets/imgs/c6.webp" class="w-12 h-12 bg-gradient-to-r from-brand to-brand-2 rounded-xl grid place-items-center text-xl text-white" />
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-white">محصولات سوپرمارکتی</h3>
+          <div class="text-sm text-gray-500 dark:text-gray-400">۳۲ محصول</div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 p-4 shadow hover:shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-all cursor-pointer">
+        <img src="assets/imgs/c7.webp" class="w-12 h-12 bg-gradient-to-r from-brand to-brand-2 rounded-xl grid place-items-center text-xl text-white" />
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-white">کالای دیجیتال</h3>
+          <div class="text-sm text-gray-500 dark:text-gray-400">۲۲ محصول</div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 p-4 shadow hover:shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-all cursor-pointer">
+        <img src="assets/imgs/c9.svg" class="w-12 h-12 bg-gradient-to-r from-brand to-brand-2 rounded-xl grid place-items-center text-xl text-white" />
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-white">پیشنهاد شگفت انگیز</h3>
+          <div class="text-sm text-gray-500 dark:text-gray-400">۲۴ محصول</div>
+        </div>
+      </div>
+
+      <div data-page="near.html" class="flex items-center gap-3 p-4 shadow hover:shadow-md border border-gray-200 dark:border-gray-700 rounded-xl bg-gradient-to-r from-brand to-brand-2 dark:from-brand-2 dark:to-brand transition-all cursor-pointer">
+        <img src="assets/imgs/c8.webp" class="w-12 h-12 bg-gradient-to-r from-brand to-brand-2 rounded-xl grid place-items-center text-xl text-white" />
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-white">فروشگاه های نزدیک شما</h3>
+          <div class="text-sm text-gray-800 dark:text-white">۴ شعبه</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mb-2">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-bold text-gray-800 dark:text-white">مطالب وبلاگ</h2>
+      <a href="#" data-page="blog.html" class="text-brand font-semibold text-sm hover:underline pl-4">مشاهده همه</a>
+    </div>
+    <div class="flex gap-2 overflow-x-auto pb-4 scrollbar-hide scroll-smooth carousel">
+
+      <article class="shadow max-w-[280px] min-w-[280px] bg-white dark:bg-card border border-ring-light dark:border-ring rounded-2xl relative group hover:shadow-md transition-all cursor-pointer" data-post-title="چگونه بهترین محصولات را انتخاب کنیم؟" data-post-image="assets/imgs/pb1.jpg" data-post-summary="انتخاب محصول مناسب یکی از مهم‌ترین مراحل خرید است. در این مقاله به نکات کلیدی برای انتخاب بهترین محصولات می‌پردازیم." data-post-category="راهنمای خرید">
+        <img src="assets/imgs/pb1.jpg" class="w-full h-40 object-cover rounded-t-2xl" alt="پست وبلاگ">
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-3 py-1 bg-purple-500/20 text-purple-600 text-xs font-bold rounded-full">راهنمای خرید</span>
+            <span class="text-xs text-muted-light dark:text-muted">۱۲ آذر ۱۴۰۲</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2 line-clamp-2">چگونه بهترین محصولات را انتخاب کنیم؟</h3>
+          <p class="text-sm text-muted-light dark:text-muted mb-3 line-clamp-3">انتخاب محصول مناسب یکی از مهم‌ترین مراحل خرید است. در این مقاله به نکات کلیدی برای انتخاب بهترین محصولات می‌پردازیم.</p>
+          <div class="flex items-center gap-4 text-xs text-muted-light dark:text-muted">
+            <span>۳ دقیقه مطالعه</span>
+            <span>•</span>
+            <span>۸۹ بازدید</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="shadow max-w-[280px] min-w-[280px] bg-white dark:bg-card border border-ring-light dark:border-ring rounded-2xl relative group hover:shadow-md transition-all cursor-pointer" data-post-title="معرفی جدیدترین محصولات هفته" data-post-image="assets/imgs/pb2.jpg" data-post-summary="هر هفته جدید و جذابی به فروشگاه اضافه می‌شود. در این پست با جدیدترین محصولات این هفته آشنا شوید." data-post-category="جدید">
+        <img src="assets/imgs/pb2.jpg" class="w-full h-40 object-cover rounded-t-2xl" alt="پست وبلاگ">
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-3 py-1 bg-green-500/20 text-green-600 text-xs font-bold rounded-full">جدید</span>
+            <span class="text-xs text-muted-light dark:text-muted">۱۰ آذر ۱۴۰۲</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2 line-clamp-2">معرفی جدیدترین محصولات هفته</h3>
+          <p class="text-sm text-muted-light dark:text-muted mb-3 line-clamp-3">هر هفته جدید و جذابی به فروشگاه اضافه می‌شود. در این پست با جدیدترین محصولات این هفته آشنا شوید.</p>
+          <div class="flex items-center gap-4 text-xs text-muted-light dark:text-muted">
+            <span>۲ دقیقه مطالعه</span>
+            <span>•</span>
+            <span>۱۵۶ بازدید</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="shadow max-w-[280px] min-w-[280px] bg-white dark:bg-card border border-ring-light dark:border-ring rounded-2xl relative group hover:shadow-md transition-all cursor-pointer" data-post-title="راهنمای استفاده از کدهای تخفیف" data-post-image="assets/imgs/pb3.jpg" data-post-summary="کدهای تخفیف یکی از بهترین راه‌های صرفه‌جویی در خرید هستند. یاد بگیرید چگونه از آن‌ها بهترین استفاده را ببرید." data-post-category="تخفیف‌ها">
+        <img src="assets/imgs/pb3.jpg" class="w-full h-40 object-cover rounded-t-2xl" alt="پست وبلاگ">
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-3 py-1 bg-red-500/20 text-red-600 text-xs font-bold rounded-full">تخفیف‌ها</span>
+            <span class="text-xs text-muted-light dark:text-muted">۸ آذر ۱۴۰۲</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2 line-clamp-2">راهنمای استفاده از کدهای تخفیف</h3>
+          <p class="text-sm text-muted-light dark:text-muted mb-3 line-clamp-3">کدهای تخفیف یکی از بهترین راه‌های صرفه‌جویی در خرید هستند. یاد بگیرید چگونه از آن‌ها بهترین استفاده را ببرید.</p>
+          <div class="flex items-center gap-4 text-xs text-muted-light dark:text-muted">
+            <span>۴ دقیقه مطالعه</span>
+            <span>•</span>
+            <span>۲۰۳ بازدید</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="shadow max-w-[280px] min-w-[280px] bg-white dark:bg-card border border-ring-light dark:border-ring rounded-2xl relative group hover:shadow-md transition-all cursor-pointer" data-post-title="نحوه مراقبت از محصولات خریداری شده" data-post-image="assets/imgs/pb4.jpg" data-post-summary="پس از خرید، مراقبت صحیح از محصولات برای افزایش عمر مفید آن‌ها بسیار مهم است. نکات کاربردی را در این مقاله بخوانید." data-post-category="نکات مفید">
+        <img src="assets/imgs/pb4.jpg" class="w-full h-40 object-cover rounded-t-2xl" alt="پست وبلاگ">
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-600 text-xs font-bold rounded-full">نکات مفید</span>
+            <span class="text-xs text-muted-light dark:text-muted">۵ آذر ۱۴۰۲</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2 line-clamp-2">نحوه مراقبت از محصولات خریداری شده</h3>
+          <p class="text-sm text-muted-light dark:text-muted mb-3 line-clamp-3">پس از خرید، مراقبت صحیح از محصولات برای افزایش عمر مفید آن‌ها بسیار مهم است. نکات کاربردی را در این مقاله بخوانید.</p>
+          <div class="flex items-center gap-4 text-xs text-muted-light dark:text-muted">
+            <span>۶ دقیقه مطالعه</span>
+            <span>•</span>
+            <span>۹۸ بازدید</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="shadow max-w-[280px] min-w-[280px] bg-white dark:bg-card border border-ring-light dark:border-ring rounded-2xl relative group hover:shadow-md transition-all cursor-pointer" data-post-title="مقایسه قیمت‌ها: راهی برای خرید هوشمندانه" data-post-image="assets/imgs/banner.jpg" data-post-summary="قبل از خرید، مقایسه قیمت‌ها می‌تواند به شما کمک کند تا بهترین پیشنهاد را پیدا کنید. روش‌های مؤثر را یاد بگیرید." data-post-category="راهنمای خرید">
+        <img src="assets/imgs/banner.jpg" class="w-full h-40 object-cover rounded-t-2xl" alt="پست وبلاگ">
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-3 py-1 bg-purple-500/20 text-purple-600 text-xs font-bold rounded-full">راهنمای خرید</span>
+            <span class="text-xs text-muted-light dark:text-muted">۳ آذر ۱۴۰۲</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2 line-clamp-2">مقایسه قیمت‌ها: راهی برای خرید هوشمندانه</h3>
+          <p class="text-sm text-muted-light dark:text-muted mb-3 line-clamp-3">قبل از خرید، مقایسه قیمت‌ها می‌تواند به شما کمک کند تا بهترین پیشنهاد را پیدا کنید. روش‌های مؤثر را یاد بگیرید.</p>
+          <div class="flex items-center gap-4 text-xs text-muted-light dark:text-muted">
+            <span>۵ دقیقه مطالعه</span>
+            <span>•</span>
+            <span>۱۷۴ بازدید</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class=" mb-6 -mr-2 w-full">
+  <div class="bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 rounded-2xl p-4 text-white relative overflow-hidden border-4 border-blue-400 px-1">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-2 right-2 w-16 h-16 border-2 border-white rounded-full"></div>
+      <div class="absolute bottom-2 left-2 w-12 h-12 border-2 border-white rounded-full"></div>
+      <div class="absolute top-1/2 left-1/3 w-6 h-6 bg-white rounded-full"></div>
+      <div class="absolute top-1/4 right-1/4 w-4 h-4 bg-white rounded-full"></div>
+    </div>
+
+    <div class="relative z-10 flex">
+      <div class="flex flex-col items-center justify-center gap-4 bg-white/10 rounded-xl p-2 min-w-[80px] max-w-[80px] h-[280px]">
+        <div class="flex flex-col items-center text-center w-full">
+          <h2 class="text-4xl font-bold opacity-90"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 2048 2048"><path fill="currentColor" d="m960 120l832 416v1040l-832 415l-832-415V536zm625 456L960 264L719 384l621 314zM960 888l238-118l-622-314l-241 120zM256 680v816l640 320v-816zm768 1136l640-320V680l-640 320z"/></svg></h2>
+          <h2 class="text-sm font-bold mt-2">محصولات</h2>
+          <h2 class="text-lg font-bold mb-2">جدید</h2>
+          <a href="#" data-page="all2.html" class="text-sm font-bold mt-2 hidden">مشاهده همه</a>
+        </div>
+      
+      </div>
+      
+      <div class="flex gap-1 overflow-x-auto scrollbar-hide flex-1 mr-1 scroll-smooth carousel" id="special2-carousel">
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p1.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">لپ تاپ ایسوس Gaming X15</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۲,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۹,۲۰۰,۰۰۰</span></strong>
+
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p2.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">هدفون بلوتوثی Sony WH-1000XM4</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲,۸۵۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۵,۲۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p3.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">گوشی موبایل سامسونگ Galaxy S23</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۸,۴۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۲۳,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p4.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">ساعت هوشمند Apple Watch Series 8</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۷,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۵,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p5.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">تبلت اپل iPad Pro 12.9 اینچ</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲۱,۰۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۳۰,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p1.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">لپ تاپ ایسوس Gaming X15</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۲,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۹,۲۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p2.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">هدفون بلوتوثی Sony WH-1000XM4</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲,۸۵۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۵,۲۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p3.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">گوشی موبایل سامسونگ Galaxy S23</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۱۸,۴۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۲۳,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p4.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">ساعت هوشمند Apple Watch Series 8</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۷,۵۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۱۵,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="shadow max-w-[160px] min-w-[160px] h-[280px] px-2 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl relative group hover:shadow-lg transition-transform hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-white">
+          <img src="assets/imgs/p5.webp" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h3 class="text-sm font-semibold mb-2 line-clamp-2 text-gray-800 dark:text-white">تبلت اپل iPad Pro 12.9 اینچ</h3>
+          <div class="mt-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <strong class="text-lg text-brand font-extrabold price-with-icon" style="--price-filter: invert(50%) sepia(87%) saturate(1502%) hue-rotate(331deg) brightness(100%) contrast(101%)">۲۱,۰۰۰,۰۰۰</strong>
+            </div>
+            <div class="flex items-center gap-2 line-through text-xs text-gray-500">
+              <strong class="text-white dark:text-black text-brand">
+  <span class="filter grayscale brightness-40 dark:invert price-with-icon">۳۰,۰۰۰,۰۰۰</span></strong>
+            </div>
+          </div>
+        </article>
+
+        <div class="flex-shrink-0 w-48 bg-white/10 border-2 border-white/20 rounded-xl p-4 flex flex-col items-center justify-center text-center max-w-[160px] min-w-[160px]" data-page="all.html">
+          <div class="w-12 h-12 bg-white/20 rounded-full grid place-items-center mb-3">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </div>
+          <span class="text-sm font-semibold">مشاهده همه</span>
+          <span class="text-xs text-white/80">محصولات جدید</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کلیکلی - در حال بارگذاری</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Vazirmatn, sans-serif;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff693b 0%, #fc922f 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .logo-container {
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+        .logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .version {
+            position: fixed;
+            bottom: 20px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .loader {
+            width: 50px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .loader:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: white;
+            border-radius: 2px;
+            animation: loading 2s ease-in-out infinite;
+        }
+        @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="./assets/imgs/logo.png" alt="کلیکلی" class="logo">
+    </div>
+    <h1>کلیکلی</h1>
+    <p>فروشگاه آنلاین کلیکلی</p>
+    <div class="loader"></div>
+    <div class="version">V 1.0.0</div>
+    <script>
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 3000);
+    </script>
+</body>
+</html>

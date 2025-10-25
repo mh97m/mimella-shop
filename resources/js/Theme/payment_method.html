@@ -1,0 +1,113 @@
+<div class="pl-4">
+  <div class="flex items-center gap-4 mb-6 hidden">
+    <button class="w-10 h-10 rounded-xl bg-white dark:bg-card border border-ring-light dark:border-ring grid place-items-center" data-page="profile.html">
+      <span class="text-xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span>
+    </button>
+    <h1 class="text-2xl md:text-3xl font-extrabold">روش‌های پرداخت</h1>
+  </div>
+
+  <div class="bg-white dark:bg-card border border-ring-light dark:border-ring rounded-2xl p-6 text-center mb-24">
+    <img src="assets/imgs/cart.png" alt="payment" class="mx-auto mb-4 rounded-xl">
+    <h2 class="text-lg font-bold mb-2">هیچ کارتی ندارید</h2>
+    <p class="text-muted-light dark:text-muted text-sm">به نظر می‌رسد که هنوز کارت اعتباری ندارید. لطفاً کارت‌های خود را اضافه کنید.</p>
+  </div>
+
+  <div class="fixed bottom-20 inset-x-0 px-4">
+    <button data-modal="selectCardModal" 
+      class="w-full py-3 rounded-xl bg-gradient-to-r from-brand to-brand-2 text-white font-extrabold text-lg hover:shadow-md hover:shadow-brand/30 transition-all">
+      اضافه کردن کارت‌ها
+    </button>
+  </div>
+</div>
+
+<div id="selectCardModal" class="fixed inset-0 hidden z-50 flex items-end justify-center bg-black/50">
+  <div class="bg-white dark:bg-card w-full max-w-md rounded-t-2xl p-6">
+    <h2 class="text-xl font-bold mb-6 text-center">انتخاب کارت</h2>
+    <ul class="space-y-4">
+      <li>
+        <button data-close-modal="selectCardModal" data-page="payment_method2.html"
+          class="flex items-center justify-between w-full p-3 rounded-xl border border-ring-light dark:border-ring bg-gradient-to-r from-brand/10 to-brand-2/10 hover:shadow-md transition-all">
+          <div class="flex items-center gap-3">
+            <img src="assets/imgs/bmellat.png" class="w-12 h-8 object-cover rounded-md" alt="">
+            <div class="text-left">
+              <h5 class="font-bold">بانک ملت</h5>
+              <p class="text-sm text-muted" style="direction: ltr;">6104********0123</p>
+            </div>
+          </div>
+          <span class="text-lg">→</span>
+        </button>
+      </li>
+      <li>
+        <button data-switch-modal="selectCardModal,newCardModal"
+          class="flex items-center justify-between w-full p-3 rounded-xl border border-ring-light dark:border-ring bg-gradient-to-r from-brand/10 to-brand-2/10 hover:shadow-md transition-all">
+          <div class="flex items-center gap-3">
+            <img src="assets/imgs/shetab.jpeg" class="w-12 h-8 object-cover rounded-md" alt="">
+            <div class="text-left">
+              <h5 class="font-bold">کارت های عضو شتاب</h5>
+              <p class="text-sm text-muted">+ افزودن کارت جدید</p>
+            </div>
+          </div>
+          <span class="text-lg">→</span>
+        </button>
+      </li>
+    </ul>
+    <button data-close-modal="selectCardModal" class="w-full mt-6 py-3 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-500 border border-red-500 dark:border-red-500 font-bold transition-all">انصراف</button>
+  </div>
+</div>
+
+<div id="newCardModal" class="fixed inset-0 hidden z-50 flex items-end justify-center bg-black/50">
+  <div class="bg-white dark:bg-card w-full max-w-md rounded-t-2xl p-6">
+    <h2 class="text-xl font-bold mb-6 text-center">افزودن روش پرداخت</h2>
+    <form class="space-y-4">
+      <input type="text" required placeholder="شماره کارت" class="w-full p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400">
+      <div class="grid grid-cols-2 gap-4">
+        <input type="date" required class="p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+        <input type="text" required placeholder="CVV" class="p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400">
+      </div>
+      <label class="flex items-center gap-2 text-sm text-gray-900 dark:text-white">
+        <input type="checkbox" class="accent-brand w-4 h-4 rounded">
+        <span>تنظیم به عنوان پرداخت پیش‌فرض</span>
+      </label>
+      <button type="button" data-close-modal="newCardModal" data-page="payment_method2.html" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand to-brand-2 text-white font-bold hover:shadow-md hover:shadow-brand/30 transition-all">افزودن کارت</button>
+      <button type="button" class="w-full py-3 rounded-xl border border-ring-light dark:border-ring font-bold">اسکن کارت</button>
+    </form>
+    <button data-close-modal="newCardModal" class="w-full mt-6 py-3 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-500 border border-red-500 dark:border-red-500 font-bold transition-all">انصراف</button>
+  </div>
+</div>
+
+<div id="shetabCardModal" class="fixed inset-0 hidden z-50 flex items-end justify-center bg-black/50">
+  <div class="bg-white dark:bg-card w-full max-w-md rounded-t-2xl p-6">
+    <h2 class="text-xl font-bold mb-6 text-center">کارت های عضو شتاب</h2>
+    <div class="text-center mb-6">
+      <img src="assets/imgs/shetab.jpeg" class="w-16 h-12 object-cover rounded-md mx-auto mb-4" alt="">
+      <p class="text-sm text-muted-light dark:text-muted mb-4">برای افزودن کارت عضو شتاب، روی دکمه زیر کلیک کنید</p>
+    </div>
+    <button data-close-modal="shetabCardModal" data-page="payment_method2.html" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand to-brand-2 text-white font-bold hover:shadow-md hover:shadow-brand/30 transition-all mb-4">افزودن کارت</button>
+    <button data-close-modal="shetabCardModal" class="w-full mt-6 py-3 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-500 border border-red-500 dark:border-red-500 font-bold transition-all">انصراف</button>
+  </div>
+</div>
+
+<script>
+function openModal(id){
+  const modal = document.getElementById(id);
+  modal.classList.remove('hidden');
+}
+
+function closeModal(id){
+  const modal = document.getElementById(id);
+  modal.classList.add('hidden');
+}
+
+function switchModal(fromId,toId){
+  closeModal(fromId);
+  setTimeout(()=>{ openModal(toId); },100);
+}
+
+function loadPage(page) {
+  if (typeof window.loadPage === 'function') {
+    window.loadPage(page);
+  } else {
+    window.location.href = page;
+  }
+}
+</script>

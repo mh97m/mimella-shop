@@ -1,0 +1,114 @@
+<div class="pl-4">
+  <div class="flex items-center gap-4 mb-6 hidden">
+    <button class="w-10 h-10 rounded-xl bg-white dark:bg-card border border-ring-light dark:border-ring grid place-items-center" data-page="payment_method.html">
+      <span class="text-xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span>
+    </button>
+    <h1 class="text-2xl md:text-3xl font-extrabold">کارت‌های اعتباری</h1>
+  </div>
+
+  <div class="mb-6">
+    <div class="bg-white dark:bg-card border border-ring-light dark:border-ring rounded-2xl p-4 mb-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        
+          <img src="assets/imgs/bmellat.png" class="w-12 h-8 object-cover rounded-md" alt="">
+     
+        <div>
+          <h5 class="font-bold">بانک ملت</h5>
+          <p class="text-sm text-muted-light dark:text-muted" style="direction: ltr;">6104********0123</p>
+        </div>
+      </div>
+      <button class="w-6 h-6 text-muted-light dark:text-muted">
+        <span class="text-lg">←</span>
+      </button>
+    </div>
+
+    <div class="bg-white dark:bg-card border border-ring-light dark:border-ring rounded-2xl p-4 mb-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-md flex items-center justify-center">
+          <span class="text-white text-xs font-bold">MC</span>
+        </div>
+        <div>
+          <h3 class="font-bold text-base">MasterCard</h3>
+          <p class="text-sm text-muted-light dark:text-muted">****6872</p>
+        </div>
+      </div>
+      <button class="w-6 h-6 text-muted-light dark:text-muted">
+        <span class="text-lg">←</span>
+      </button>
+    </div>
+    
+    <div class="bg-white dark:bg-card border border-ring-light dark:border-ring rounded-2xl p-4 mb-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded-md flex items-center justify-center">
+          <span class="text-white text-xs font-bold">VISA</span>
+        </div>
+        <div>
+          <h3 class="font-bold text-base">VISA Card</h3>
+          <p class="text-sm text-muted-light dark:text-muted">****6872</p>
+        </div>
+      </div>
+      <button class="w-6 h-6 text-muted-light dark:text-muted">
+        <span class="text-lg">←</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="selectCardModal" class="fixed inset-0 hidden z-50 flex items-end justify-center bg-black/50">
+  <div class="bg-white dark:bg-card w-full max-w-md rounded-t-2xl p-6">
+    <h2 class="text-xl font-bold mb-6 text-center">انتخاب کارت</h2>
+    <ul class="space-y-4">
+      <li>
+        <button data-switch-modal="selectCardModal,newCardModal" 
+          class="flex items-center justify-between w-full p-3 rounded-xl border border-ring-light dark:border-ring bg-gradient-to-r from-brand/10 to-brand-2/10 hover:shadow-lg transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-md flex items-center justify-center">
+              <span class="text-white text-xs font-bold">MC</span>
+            </div>
+            <div class="text-left">
+              <h5 class="font-bold">MasterCard</h5>
+              <p class="text-sm text-muted">*****6872</p>
+            </div>
+          </div>
+          <span class="text-lg">→</span>
+        </button>
+      </li>
+      <li>
+        <button data-switch-modal="selectCardModal,newCardModal" 
+          class="flex items-center justify-between w-full p-3 rounded-xl border border-ring-light dark:border-ring bg-gradient-to-r from-brand/10 to-brand-2/10 hover:shadow-lg transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded-md flex items-center justify-center">
+              <span class="text-white text-xs font-bold">VISA</span>
+            </div>
+            <div class="text-left">
+              <h5 class="font-bold">Visa</h5>
+              <p class="text-sm text-muted">*****4451</p>
+            </div>
+          </div>
+          <span class="text-lg">→</span>
+        </button>
+      </li>
+    </ul>
+    <button data-close-modal="selectCardModal" class="w-full mt-6 py-3 rounded-xl border border-ring-light dark:border-ring font-bold">انصراف</button>
+  </div>
+</div>
+
+<div id="newCardModal" class="fixed inset-0 hidden z-50 flex items-end justify-center bg-black/50">
+  <div class="bg-white dark:bg-card w-full max-w-md rounded-t-2xl p-6">
+    <h2 class="text-xl font-bold mb-6 text-center">افزودن روش پرداخت</h2>
+    <form class="space-y-4">
+      <input type="text" required placeholder="شماره کارت" class="w-full p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none">
+      <div class="grid grid-cols-2 gap-4">
+        <input type="date" required class="p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none">
+        <input type="text" required placeholder="CVV" class="p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none">
+      </div>
+      <label class="flex items-center gap-2 text-sm">
+        <input type="checkbox" class="accent-brand w-4 h-4 rounded">
+        <span>تنظیم به عنوان پرداخت پیش‌فرض</span>
+      </label>
+      <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand to-brand-2 text-black font-bold hover:shadow-lg hover:shadow-brand/30 transition-all">افزودن کارت</button>
+      <button type="button" class="w-full py-3 rounded-xl border border-ring-light dark:border-ring font-bold">اسکن کارت</button>
+    </form>
+    <button data-close-modal="newCardModal" class="w-full mt-6 py-3 rounded-xl border border-ring-light dark:border-ring font-bold">انصراف</button>
+  </div>
+</div>

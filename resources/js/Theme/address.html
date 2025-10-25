@@ -1,0 +1,304 @@
+<div class="pl-4">
+  <div class="flex items-center gap-4 mb-6 hidden">
+    <button class="w-10 h-10 rounded-xl bg-white dark:bg-card border border-ring-light dark:border-ring grid place-items-center" data-page="profile.html">
+      <span class="text-xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span>
+    </button>
+    <h1 class="text-2xl md:text-3xl font-extrabold">آدرس‌های من</h1>
+  </div>
+
+  <div class="mb-6">
+    <button id="addAddressBtn" data-modal="newAddressModal" class="w-full bg-gradient-to-r from-brand to-brand-2 text-white py-3 rounded-2xl font-bold text-lg shadow-lg hover:shadow-md transition-all flex items-center justify-center gap-3">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+      </svg>
+      افزودن آدرس جدید
+    </button>
+  </div>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+      <div class="w-1 h-6 bg-brand rounded-full"></div>
+      آدرس‌های ذخیره شده
+    </h2>
+
+    <div class="bg-white dark:bg-gray-900 border-2 border-brand dark:border-brand rounded-2xl p-4 mb-4 relative">
+      <div class="absolute top-4 left-4">
+        <span class="bg-brand text-white px-3 py-1 rounded-full text-xs font-bold">پیش‌فرض</span>
+      </div>
+      <div class="flex items-start gap-4 mb-4">
+        <div class="w-12 h-12 bg-gradient-to-r from-brand to-brand-2 rounded-xl flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-lg mb-1">منزل</h3>
+          <p class="text-sm text-muted-light dark:text-muted mb-2">تهران، خیابان ولیعصر، کوچه شهید احمدی، پلاک ۱۲۳</p>
+          <div class="flex items-center gap-4 text-xs">
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              ۰۹۱۲۳۴۵۶۷۸۹
+            </span>
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              کد پستی: ۱۲۳۴۵۶۷۸۹۰
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button class="flex-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 py-2 rounded-xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          ویرایش
+        </button>
+        <button class="flex-1 bg-red-100 dark:bg-red-900/30 text-red-600 py-2 rounded-xl font-semibold hover:bg-red-200 dark:hover:bg-red-900/50 transition-colors">
+          حذف
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-4 mb-4">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-lg mb-1">محل کار</h3>
+          <p class="text-sm text-muted-light dark:text-muted mb-2">تهران، میدان آزادی، برج میلاد، طبقه ۱۵، واحد ۱۵۰۲</p>
+          <div class="flex items-center gap-4 text-xs">
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              ۰۹۱۲۳۴۵۶۷۸۹
+            </span>
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              کد پستی: ۰۹۸۷۶۵۴۳۲۱
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button class="flex-1 bg-brand text-white py-2 rounded-xl font-semibold hover:bg-brand/90 transition-colors">
+          انتخاب
+        </button>
+        <button class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          ویرایش
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-4 mb-4">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-lg mb-1">خانه والدین</h3>
+          <p class="text-sm text-muted-light dark:text-muted mb-2">کرج، خیابان مطهری، کوچه گلستان، پلاک ۴۵</p>
+          <div class="flex items-center gap-4 text-xs">
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              ۰۲۶۱۲۳۴۵۶۷۸
+            </span>
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              کد پستی: ۳۱۵۹۷۱۲۳۴۵
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button class="flex-1 bg-brand text-white py-2 rounded-xl font-semibold hover:bg-brand/90 transition-colors">
+          انتخاب
+        </button>
+        <button class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          ویرایش
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-4">
+    <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+      <div class="w-1 h-6 bg-blue-500 rounded-full"></div>
+      عملیات سریع
+    </h2>
+    
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:shadow-lg transition-all cursor-pointer">
+        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-sm">موقعیت فعلی</h3>
+        <p class="text-xs text-muted-light dark:text-muted">استفاده از GPS</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 text-center hover:shadow-lg transition-all cursor-pointer">
+        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9 11H7v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-9h-2m1-10V2a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v9h8V1z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-sm">آدرس‌های اخیر</h3>
+        <p class="text-xs text-muted-light dark:text-muted">انتخاب سریع</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="newAddressModal" class="fixed inset-0 hidden z-50 flex items-end justify-center bg-black/50">
+  <div class="bg-white dark:bg-card w-full max-w-md rounded-t-2xl p-6 max-h-[90vh] overflow-y-auto">
+    <h2 class="text-xl font-bold mb-6 text-center">افزودن آدرس جدید</h2>
+    
+    <form class="space-y-4">
+      <div>
+        <label class="block text-sm font-bold mb-2">عنوان آدرس</label>
+        <input type="text" required placeholder="مثال: منزل، محل کار، ..." class="w-full p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400">
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-bold mb-2">استان</label>
+          <select required class="w-full p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+            <option value="">انتخاب استان</option>
+            <option value="tehran">تهران</option>
+            <option value="isfahan">اصفهان</option>
+            <option value="shiraz">شیراز</option>
+            <option value="mashhad">مشهد</option>
+            <option value="tabriz">تبریز</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-bold mb-2">شهر</label>
+          <select required class="w-full p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+            <option value="">انتخاب شهر</option>
+            <option value="tehran">تهران</option>
+            <option value="karaj">کرج</option>
+            <option value="rey">ری</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-bold mb-2">آدرس کامل</label>
+        <textarea rows="3" required placeholder="خیابان، کوچه، پلاک، واحد..." class="w-full p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 resize-none"></textarea>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-bold mb-2">کد پستی</label>
+          <input type="text" required placeholder="۱۲۳۴۵۶۷۸۹۰" maxlength="10" class="w-full p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400">
+        </div>
+        <div>
+          <label class="block text-sm font-bold mb-2">شماره تماس</label>
+          <input type="tel" required placeholder="۰۹۱۲۳۴۵۶۷۸۹" class="w-full p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400">
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-bold mb-2">نام گیرنده</label>
+        <input type="text" required placeholder="نام و نام خانوادگی گیرنده" class="w-full p-3 rounded-xl border border-ring-light dark:border-ring focus:border-brand outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400">
+      </div>
+      <div>
+        <label class="block text-sm font-bold mb-2">موقعیت روی نقشه</label>
+        <div class="w-full h-32 bg-gray-200 dark:bg-gray-700 rounded-xl flex items-center justify-center border border-ring-light dark:border-ring cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+          <div class="text-center">
+            <svg class="w-8 h-8 mx-auto mb-1 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <p class="text-xs text-gray-500">انتخاب موقعیت</p>
+          </div>
+        </div>
+      </div>
+      <label class="flex items-center gap-2 text-sm text-gray-900 dark:text-white">
+        <input type="checkbox" class="accent-brand w-4 h-4 rounded">
+        <span>تنظیم به عنوان آدرس پیش‌فرض</span>
+      </label>
+      <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand to-brand-2 text-white font-bold hover:shadow-md hover:shadow-brand/30 transition-all">
+        ذخیره آدرس
+      </button>
+      <button type="button" class="w-full py-3 rounded-xl border border-ring-light dark:border-ring font-bold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+        استفاده از موقعیت فعلی
+      </button>
+    </form>
+    <button data-close-modal="newAddressModal" class="w-full mt-6 py-3 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-500 border border-red-500 dark:border-red-500 font-bold transition-all">
+      انصراف
+    </button>
+  </div>
+</div>
+
+<script>
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const addAddressBtn = document.getElementById('addAddressBtn');
+  const newAddressModal = document.getElementById('newAddressModal');
+  addAddressBtn.addEventListener('click', function() {
+    openModal('newAddressModal');
+  });
+  newAddressModal.addEventListener('click', function(e) {
+    if (e.target === newAddressModal) {
+      closeModal('newAddressModal');
+    }
+  });
+  const form = newAddressModal.querySelector('form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const addressTitle = form.querySelector('input[placeholder*="منزل"]').value;
+    const province = form.querySelector('select').value;
+    const fullAddress = form.querySelector('textarea').value;
+    const postalCode = form.querySelector('input[placeholder*="۱۲۳۴۵۶۷۸۹۰"]').value;
+    const phone = form.querySelector('input[placeholder*="۰۹۱۲۳۴۵۶۷۸۹"]').value;
+    const receiverName = form.querySelector('input[placeholder*="نام و نام خانوادگی"]').value;
+    const isDefault = form.querySelector('input[type="checkbox"]').checked;
+
+    if (!addressTitle || !province || !fullAddress || !postalCode || !phone || !receiverName) {
+      alert('لطفاً تمام فیلدهای الزامی را پر کنید');
+      return;
+    }
+    alert('آدرس با موفقیت ذخیره شد!');
+    form.reset();
+    closeModal('newAddressModal');
+  });
+  const gpsBtn = newAddressModal.querySelector('button[type="button"]:last-of-type');
+  gpsBtn.addEventListener('click', function() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        alert(`موقعیت شما: ${position.coords.latitude}, ${position.coords.longitude}`);
+      }, function(error) {
+        alert('خطا در دریافت موقعیت: ' + error.message);
+      });
+    } else {
+      alert('مرورگر شما از GPS پشتیبانی نمی‌کند');
+    }
+  });
+});
+</script>
