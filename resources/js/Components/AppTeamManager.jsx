@@ -42,7 +42,7 @@ export default memo(() => {
             <Icon icon="lucide:rocket" />
           </div>
           <div className="grid flex-1 text-left text-sm leading-tight">
-            <span className="truncate font-semibold">{auth.user.current_team.name}</span>
+            <span className="truncate font-semibold">{auth?.user?.current_team?.name}</span>
             <span className="truncate text-xs">Manage Team</span>
           </div>
           <Icon icon="lucide:chevrons-up-down" className="ml-auto size-4" />
@@ -59,7 +59,7 @@ export default memo(() => {
             <CommandInput placeholder="Search team..." />
             <CommandEmpty>No team found.</CommandEmpty>
             <CommandGroup heading="Switch Teams">
-              {auth.user.all_teams.map(team => (
+              {auth?.user?.all_teams.map(team => (
                 <CommandItem
                   key={team.id}
                   value={team.name}
@@ -72,7 +72,7 @@ export default memo(() => {
                     <AvatarFallback>{team.name.charAt(0)}</AvatarFallback>
                   </Avatar>
                   {team.name}
-                  {team.id === auth.user.current_team_id && (
+                  {team.id === auth?.user?.current_team_id && (
                     <Icon
                       icon="lucide:check"
                       className="ml-auto size-4"
@@ -82,10 +82,10 @@ export default memo(() => {
               ))}
             </CommandGroup>
           </CommandList>
-          {auth.user.all_teams.length > 1 && <CommandSeparator />}
+          {auth?.user?.all_teams.length > 1 && <CommandSeparator />}
           <CommandGroup heading="Manage Team">
             <CommandItem value="team-settings">
-              <Link href={route('teams.show', auth.user.current_team)}>
+              <Link href={route('teams.show', auth?.user?.current_team)}>
                 Team Settings
               </Link>
             </CommandItem>
