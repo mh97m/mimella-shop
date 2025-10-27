@@ -1,12 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Database\Factories\ProductCommentFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class ProductComment extends Model
+final class ProductComment extends Model
 {
-    /** @use HasFactory<\Database\Factories\ProductCommentFactory> */
+    /** @use HasFactory<ProductCommentFactory> */
     use HasFactory;
 }

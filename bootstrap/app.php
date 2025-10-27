@@ -15,6 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
         api: __DIR__.'/../routes/api.php',
         health: '/up',
     )
+    ->withCommands([
+        'routes/general.php',
+    ])
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->web(append: [
             HandleInertiaRequests::class,

@@ -1,12 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Database\Factories\AddressFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Address extends Model
+final class Address extends Model
 {
-    /** @use HasFactory<\Database\Factories\AddressFactory> */
+    /** @use HasFactory<AddressFactory> */
     use HasFactory;
 }

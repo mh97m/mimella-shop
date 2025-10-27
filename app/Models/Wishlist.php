@@ -1,12 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Database\Factories\WishlistFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Wishlist extends Model
+final class Wishlist extends Model
 {
-    /** @use HasFactory<\Database\Factories\WishlistFactory> */
+    /** @use HasFactory<WishlistFactory> */
     use HasFactory;
 }

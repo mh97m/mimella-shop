@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3941938e5bc4703cec92062f95176074",
+    "content-hash": "2943fecebe5d2b83fd9d169f14a5ea06",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -2200,6 +2200,189 @@
             "time": "2025-08-22T14:27:06+00:00"
         },
         {
+            "name": "hekmatinasser/jalali",
+            "version": "v8.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hekmatinasser/jalali.git",
+                "reference": "423c848ec32fb36e9ab9610d82f98efa2de0f79d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hekmatinasser/jalali/zipball/423c848ec32fb36e9ab9610d82f98efa2de0f79d",
+                "reference": "423c848ec32fb36e9ab9610d82f98efa2de0f79d",
+                "shasum": ""
+            },
+            "require": {
+                "hekmatinasser/notowo": "^1.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.18|^5.20|^6.24|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Hekmatinasser\\Jalali\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nasser Hekmati",
+                    "email": "hekmati.nasser@gmail.com"
+                }
+            ],
+            "description": "This Package helps developers to work with Jalali Datetime class for PHP",
+            "keywords": [
+                "Jalali",
+                "date",
+                "datetime",
+                "php",
+                "shamsi"
+            ],
+            "support": {
+                "issues": "https://github.com/hekmatinasser/jalali/issues",
+                "source": "https://github.com/hekmatinasser/jalali/tree/x8.2.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/hekmatinasser",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-09T12:43:59+00:00"
+        },
+        {
+            "name": "hekmatinasser/notowo",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hekmatinasser/notowo.git",
+                "reference": "c51ad5dcedac966dd93ce558ac7e6a84e0020d6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hekmatinasser/notowo/zipball/c51ad5dcedac966dd93ce558ac7e6a84e0020d6d",
+                "reference": "c51ad5dcedac966dd93ce558ac7e6a84e0020d6d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Hekmatinasser\\Notowo\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nasser Hekmati",
+                    "email": "hekmati.nasser@gmail.com"
+                }
+            ],
+            "description": "This Package helps developers change number to word for all language on Laravel freamwork PHP",
+            "keywords": [
+                "Notowo",
+                "laravel",
+                "n2w",
+                "number",
+                "word"
+            ],
+            "support": {
+                "issues": "https://github.com/hekmatinasser/notowo/issues",
+                "source": "https://github.com/hekmatinasser/notowo/tree/v1.0.1"
+            },
+            "time": "2017-09-22T13:41:16+00:00"
+        },
+        {
+            "name": "hekmatinasser/verta",
+            "version": "v8.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hekmatinasser/verta.git",
+                "reference": "754307385c8576eb295adea0e3345c089314b60a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hekmatinasser/verta/zipball/754307385c8576eb295adea0e3345c089314b60a",
+                "reference": "754307385c8576eb295adea0e3345c089314b60a",
+                "shasum": ""
+            },
+            "require": {
+                "hekmatinasser/jalali": "^8.2.3",
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/validation": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.23|^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Verta": "Hekmatinasser\\Verta\\Verta"
+                    },
+                    "providers": [
+                        "Hekmatinasser\\Verta\\Laravel\\VertaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Hekmatinasser\\Verta\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nasser Hekmati",
+                    "email": "hekmati.nasser@gmail.com"
+                }
+            ],
+            "description": "This Package helps developers to work with Jalali Datetime class for Laravel Framework PHP",
+            "keywords": [
+                "Jalali",
+                "Verta",
+                "date",
+                "datetime",
+                "laravel",
+                "shamsi"
+            ],
+            "support": {
+                "issues": "https://github.com/hekmatinasser/verta/issues",
+                "source": "https://github.com/hekmatinasser/verta/tree/v8.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/hekmatinasser",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-03-09T13:03:20+00:00"
+        },
+        {
             "name": "inertiajs/inertia-laravel",
             "version": "v2.0.10",
             "source": {
@@ -3191,16 +3374,16 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "v5.23.0",
+            "version": "v5.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "e9e0fc83b9d8d71c8385a5da20e5b95ca6234cf5"
+                "reference": "83d7523c97c1101d288126948947891319eef800"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/e9e0fc83b9d8d71c8385a5da20e5b95ca6234cf5",
-                "reference": "e9e0fc83b9d8d71c8385a5da20e5b95ca6234cf5",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/83d7523c97c1101d288126948947891319eef800",
+                "reference": "83d7523c97c1101d288126948947891319eef800",
                 "shasum": ""
             },
             "require": {
@@ -3259,7 +3442,7 @@
                 "issues": "https://github.com/laravel/socialite/issues",
                 "source": "https://github.com/laravel/socialite"
             },
-            "time": "2025-07-23T14:16:08+00:00"
+            "time": "2025-10-27T15:36:41+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -12982,16 +13165,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "2.2.5",
+            "version": "2.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "fb9418af7777dfb1c87a536dc58398b5b07c74b9"
+                "reference": "5c5bbc956b9a056a26cb593379253104b7ed9c2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/fb9418af7777dfb1c87a536dc58398b5b07c74b9",
-                "reference": "fb9418af7777dfb1c87a536dc58398b5b07c74b9",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/5c5bbc956b9a056a26cb593379253104b7ed9c2d",
+                "reference": "5c5bbc956b9a056a26cb593379253104b7ed9c2d",
                 "shasum": ""
             },
             "require": {
@@ -13030,7 +13213,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/2.2.5"
+                "source": "https://github.com/rectorphp/rector/tree/2.2.6"
             },
             "funding": [
                 {
@@ -13038,7 +13221,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-23T11:22:37+00:00"
+            "time": "2025-10-27T11:35:56+00:00"
         },
         {
             "name": "sebastian/cli-parser",

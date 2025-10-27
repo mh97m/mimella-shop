@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Policies;
 
-use App\Models\CartItem;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
+use App\Models\CartItem;
 
-class CartItemPolicy
+final class CartItemPolicy
 {
     /**
      * Determine whether the user can view any models.

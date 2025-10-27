@@ -1,13 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 
-class DatabaseSeeder extends Seeder
+final class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
@@ -84,7 +86,7 @@ class DatabaseSeeder extends Seeder
             $products[] = [
                 'category_id' => $categoryIds[array_rand($categoryIds)],
                 'name' => $name,
-                'slug' => Str::slug($name) . '-' . rand(100, 999),
+                'slug' => Str::slug($name).'-'.rand(100, 999),
                 'description' => "Description for $name - stylish and comfortable clothing item.",
                 'price' => rand(15, 200),
                 'stock' => rand(5, 50),
@@ -131,7 +133,7 @@ class DatabaseSeeder extends Seeder
                 $comments[] = [
                     'product_id' => $pid,
                     'user_id' => $user2Id,
-                    'content' => "Good fit and comfortable!",
+                    'content' => 'Good fit and comfortable!',
                     'rating' => rand(4, 5),
                     'created_at' => now(),
                     'updated_at' => now(),

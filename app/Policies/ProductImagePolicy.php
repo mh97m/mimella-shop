@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Policies;
 
-use App\Models\ProductImage;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
+use App\Models\ProductImage;
 
-class ProductImagePolicy
+final class ProductImagePolicy
 {
     /**
      * Determine whether the user can view any models.

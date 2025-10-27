@@ -1,12 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Database\Factories\OrderItemFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class OrderItem extends Model
+final class OrderItem extends Model
 {
-    /** @use HasFactory<\Database\Factories\OrderItemFactory> */
+    /** @use HasFactory<OrderItemFactory> */
     use HasFactory;
 }
