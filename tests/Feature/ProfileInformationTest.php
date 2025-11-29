@@ -9,10 +9,10 @@ test('profile information can be updated', function (): void {
 
     $this->put('/user/profile-information', [
         'name' => 'Test Name',
-        'email' => 'test@example.com',
+        'mobile' => 'test@example.com',
     ]);
 
     expect($user->fresh())
         ->name->toEqual('Test Name')
-        ->email->toEqual('test@example.com');
+        ->mobile->toEqual('test@example.com');
 });

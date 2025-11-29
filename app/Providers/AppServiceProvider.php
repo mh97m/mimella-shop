@@ -168,6 +168,6 @@ final class AppServiceProvider extends ServiceProvider
      */
     private function configureRateLimiting(): void
     {
-        RateLimiter::for('login-link', fn (Request $request) => $request->email ? Limit::perHour(5)->by($request->email) : Limit::perHour(5)->by($request->ip()));
+        RateLimiter::for('login-link', fn (Request $request) => $request->mobile ? Limit::perHour(5)->by($request->mobile) : Limit::perHour(5)->by($request->ip()));
     }
 }

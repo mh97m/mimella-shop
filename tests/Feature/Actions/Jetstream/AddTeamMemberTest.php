@@ -38,20 +38,20 @@ describe('add team member action', function (): void {
         $this->action->add(
             $this->owner,
             $this->team,
-            $this->newMember->email,
+            $this->newMember->mobile,
             'admin'
         );
 
         $this->team->refresh();
 
         expect($this->team->users)->toHaveCount(1)
-            ->and($this->team->hasUserWithEmail($this->newMember->email))->toBeTrue();
+            ->and($this->team->hasUserWithMobile($this->newMember->mobile))->toBeTrue();
 
         Event::assertDispatched(AddingTeamMember::class);
         Event::assertDispatched(TeamMemberAdded::class);
     });
 
-    test('validates team member email exists', function (): void {
+    test('validates team member mobile exists', function (): void {
         Gate::shouldReceive('forUser')
             ->with($this->owner)
             ->andReturn(Gate::partialMock());
@@ -82,7 +82,7 @@ describe('add team member action', function (): void {
         expect(fn () => $this->action->add(
             $this->owner,
             $this->team,
-            $this->newMember->email,
+            $this->newMember->mobile,
             'admin'
         ))->toThrow(ValidationException::class);
     });
@@ -101,7 +101,7 @@ describe('add team member action', function (): void {
         expect(fn () => $this->action->add(
             $this->owner,
             $this->team,
-            $this->newMember->email,
+            $this->newMember->mobile,
             null
         ))->toThrow(ValidationException::class);
     });
@@ -120,7 +120,7 @@ describe('add team member action', function (): void {
         expect(fn () => $this->action->add(
             $this->owner,
             $this->team,
-            $this->newMember->email,
+            $this->newMember->mobile,
             'invalid-role'
         ))->toThrow(ValidationException::class);
     });
@@ -137,7 +137,7 @@ describe('add team member action', function (): void {
         expect(fn () => $this->action->add(
             $this->owner,
             $this->team,
-            $this->newMember->email,
+            $this->newMember->mobile,
             'admin'
         ))->toThrow(AuthorizationException::class);
     });
@@ -157,7 +157,7 @@ describe('add team member action', function (): void {
         $this->action->add(
             $this->owner,
             $this->team,
-            $this->newMember->email,
+            $this->newMember->mobile,
             'admin'
         );
 

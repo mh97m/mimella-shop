@@ -22,13 +22,13 @@ final class AddTeamMember implements AddsTeamMembers
     /**
      * Add a new team member to the given team.
      */
-    public function add(User $user, Team $team, string $email, ?string $role = null): void
+    public function add(User $user, Team $team, string $mobile, ?string $role = null): void
     {
         Gate::forUser($user)->authorize('addTeamMember', $team);
 
-        $this->validate($team, $email, $role);
+        $this->validate($team, $mobile, $role);
 
-        $newTeamMember = Jetstream::findUserByEmailOrFail($email);
+        $newTeamMember = Jetstream::findUserByMobileOrFail($mobile);
 
         AddingTeamMember::dispatch($team, $newTeamMember);
 
@@ -42,15 +42,15 @@ final class AddTeamMember implements AddsTeamMembers
     /**
      * Validate the add member operation.
      */
-    private function validate(Team $team, string $email, ?string $role): void
+    private function validate(Team $team, string $mobile, ?string $role): void
     {
         Validator::make([
-            'email' => $email,
+            'mobile' => $mobile,
             'role' => $role,
         ], $this->rules(), [
-            'email.exists' => __('We were unable to find a registered user with this email address.'),
+            'mobile.exists' => __('We were unable to find a registered user with this mobile address.'),
         ])->after(
-            $this->ensureUserIsNotAlreadyOnTeam($team, $email)
+            $this->ensureUserIsNotAlreadyOnTeam($team, $mobile)
         )->validateWithBag('addTeamMember');
     }
 
@@ -62,7 +62,7 @@ final class AddTeamMember implements AddsTeamMembers
     private function rules(): array
     {
         return array_filter([
-            'email' => ['required', 'email', 'exists:users'],
+            'mobile' => ['required', 'mobile', 'exists:users'],
             'role' => Jetstream::hasRoles()
                             ? ['required', 'string', new Role]
                             : null,
@@ -72,13 +72,13 @@ final class AddTeamMember implements AddsTeamMembers
     /**
      * Ensure that the user is not already on the team.
      */
-    private function ensureUserIsNotAlreadyOnTeam(Team $team, string $email): Closure
+    private function ensureUserIsNotAlreadyOnTeam(Team $team, string $mobile): Closure
     {
-        return function ($validator) use ($team, $email): void {
+        return function ($validator) use ($team, $mobile): void {
             /** @var ValidatorAlias $validator */
             $validator->errors()->addIf(
-                $team->hasUserWithEmail($email),
-                'email',
+                $team->hasUserWithMobile($mobile),
+                'mobile',
                 __('This user already belongs to the team.')
             );
         };

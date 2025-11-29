@@ -17,7 +17,6 @@ use Laravel\Sanctum\PersonalAccessToken;
 use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\Collection;
 use Laravel\Fortify\TwoFactorAuthenticatable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -29,8 +28,8 @@ use function Illuminate\Events\queueable;
 /**
  * @property int $id
  * @property string $name
- * @property string $email
- * @property CarbonImmutable|null $email_verified_at
+ * @property string $mobile
+ * @property CarbonImmutable|null $mobile_verified_at
  * @property string $password
  * @property string|null $remember_token
  * @property int|null $current_team_id
@@ -72,8 +71,8 @@ use function Illuminate\Events\queueable;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereCurrentTeamId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereDeletedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereEmailVerifiedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereMobile($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereMobileVerifiedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User wherePassword($value)
@@ -90,7 +89,7 @@ use function Illuminate\Events\queueable;
  *
  * @mixin \Eloquent
  */
-final class User extends Authenticatable implements FilamentUser, MustVerifyEmail
+final class User extends Authenticatable implements FilamentUser
 {
     use Billable;
     use HasApiTokens;
@@ -158,7 +157,7 @@ final class User extends Authenticatable implements FilamentUser, MustVerifyEmai
      */
     public function canAccessPanel(Panel $panel): bool
     {
-        return true;
+        return $this->is_admin;
     }
 
     protected static function booted(): void
@@ -178,7 +177,7 @@ final class User extends Authenticatable implements FilamentUser, MustVerifyEmai
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
+            'mobile_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
     }

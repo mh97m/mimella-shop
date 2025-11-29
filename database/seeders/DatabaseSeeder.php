@@ -32,7 +32,7 @@ final class DatabaseSeeder extends Seeder
          */
         $adminId = DB::table('users')->insertGetId([
             'name' => 'Admin User',
-            'email' => 'admin@example.com',
+            'mobile' => 'admin@example.com',
             'password' => Hash::make('password'),
             'is_admin' => true,
             'created_at' => now(),
@@ -41,7 +41,7 @@ final class DatabaseSeeder extends Seeder
 
         $userId = DB::table('users')->insertGetId([
             'name' => 'John Doe',
-            'email' => 'user@example.com',
+            'mobile' => 'user@example.com',
             'password' => Hash::make('password'),
             'is_admin' => false,
             'created_at' => now(),
@@ -50,7 +50,7 @@ final class DatabaseSeeder extends Seeder
 
         $user2Id = DB::table('users')->insertGetId([
             'name' => 'Jane Smith',
-            'email' => 'jane@example.com',
+            'mobile' => 'jane@example.com',
             'password' => Hash::make('password'),
             'is_admin' => false,
             'created_at' => now(),
@@ -245,7 +245,7 @@ final class DatabaseSeeder extends Seeder
         $settings = [
             ['key' => 'shop_name', 'value' => 'My Clothing Shop'],
             ['key' => 'currency', 'value' => 'EUR'],
-            ['key' => 'support_email', 'value' => 'support@myshop.com'],
+            ['key' => 'support_mobile', 'value' => 'support@myshop.com'],
             ['key' => 'items_per_page', 'value' => '12'],
         ];
         foreach ($settings as &$s) {

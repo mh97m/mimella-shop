@@ -21,7 +21,7 @@ final class UpdateUserProfileInformation implements UpdatesUserProfileInformatio
     {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+            'mobile' => ['required', 'mobile', 'max:255', Rule::unique('users')->ignore($user->id)],
             'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:1024'],
         ])->validateWithBag('updateProfileInformation');
 
@@ -29,23 +29,23 @@ final class UpdateUserProfileInformation implements UpdatesUserProfileInformatio
             $user->updateProfilePhoto($input['photo']);
         }
 
-        if ($input['email'] !== $user->email && $user->hasVerifiedEmail()) {
+        if ($input['mobile'] !== $user->mobile && $user->hasVerifiedMobile()) {
             $validated = Validator::make($input, [
                 'name' => ['required', 'string'],
-                'email' => ['required', 'string'],
+                'mobile' => ['required', 'string'],
             ])->validate();
 
-            /** @var array{name: string, email: string} $data */
+            /** @var array{name: string, mobile: string} $data */
             $data = [
                 'name' => $validated['name'],
-                'email' => $validated['email'],
+                'mobile' => $validated['mobile'],
             ];
 
             $this->updateVerifiedUser($user, $data);
         } else {
             $user->forceFill([
                 'name' => $input['name'],
-                'email' => $input['email'],
+                'mobile' => $input['mobile'],
             ])->save();
         }
     }
@@ -59,10 +59,10 @@ final class UpdateUserProfileInformation implements UpdatesUserProfileInformatio
     {
         $user->forceFill([
             'name' => $input['name'],
-            'email' => $input['email'],
-            'email_verified_at' => null,
+            'mobile' => $input['mobile'],
+            'mobile_verified_at' => null,
         ])->save();
 
-        $user->sendEmailVerificationNotification();
+        $user->sendMobileVerificationNotification();
     }
 }

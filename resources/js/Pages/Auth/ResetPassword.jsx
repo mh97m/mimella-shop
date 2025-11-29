@@ -10,14 +10,14 @@ import { useForm } from '@inertiajs/react'
 import { memo } from 'react'
 import { route } from 'ziggy-js'
 
-export default memo(({ email, token }) => {
+export default memo(({ mobile, token }) => {
   useSeoMetaTags({
     title: 'Reset Password',
   })
 
   const form = useForm({
     token,
-    email,
+    mobile,
     password: '',
     password_confirmation: '',
   })
@@ -44,18 +44,18 @@ export default memo(({ email, token }) => {
         <CardContent>
           <form onSubmit={submit}>
             <div>
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="mobile">Mobile</Label>
               <Input
-                id="email"
-                type="email"
-                value={form.data.email}
-                onChange={e => form.setData('email', e.target.value)}
+                id="mobile"
+                type="mobile"
+                value={form.data.mobile}
+                onChange={e => form.setData('mobile', e.target.value)}
                 className="mt-1 block w-full"
                 required
                 autoFocus
                 autoComplete="username"
               />
-              <InputError className="mt-2" message={form.errors.email} />
+              <InputError className="mt-2" message={form.errors.mobile} />
             </div>
 
             <div className="mt-4">

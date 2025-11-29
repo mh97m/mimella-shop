@@ -46,7 +46,7 @@ final class ApiUserController extends Controller
 
         return app(CreateNewUser::class)->create([
             'name' => (string) $request->string('name'),
-            'email' => (string) $request->string('email'),
+            'mobile' => (string) $request->string('mobile'),
             'password' => (string) $request->string('password'),
             'password_confirmation' => (string) $request->string('password_confirmation'),
             'terms' => 'true',
@@ -74,7 +74,7 @@ final class ApiUserController extends Controller
 
         app(UpdateUserProfileInformation::class)->update($user, [
             'name' => $request->name,
-            'email' => $request->email,
+            'mobile' => $request->mobile,
         ]);
 
         return $user;

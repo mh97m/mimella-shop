@@ -27,7 +27,7 @@ export default function TeamMemberManager({ team, availableRoles, userPermission
   const [teamMemberBeingRemoved, setTeamMemberBeingRemoved] = useState(null)
 
   const addTeamMemberForm = useForm({
-    email: '',
+    mobile: '',
     role: null,
   })
 
@@ -120,21 +120,21 @@ export default function TeamMemberManager({ team, availableRoles, userPermission
               <>
                 <div className="col-span-6">
                   <div className="max-w-xl text-sm text-gray-600 dark:text-gray-400">
-                    Please provide the email address of the person you would like to add to this team.
+                    Please provide the mobile address of the person you would like to add to this team.
                   </div>
                 </div>
 
-                {/* Member Email */}
+                {/* Member Mobile */}
                 <div className="col-span-6 sm:col-span-4">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="mobile">Mobile</Label>
                   <Input
-                    id="email"
-                    type="email"
-                    value={addTeamMemberForm.data.email}
-                    onChange={e => addTeamMemberForm.setData('email', e.target.value)}
+                    id="mobile"
+                    type="mobile"
+                    value={addTeamMemberForm.data.mobile}
+                    onChange={e => addTeamMemberForm.setData('mobile', e.target.value)}
                     className="mt-1 block w-full"
                   />
-                  <InputError message={addTeamMemberForm.errors.email} className="mt-2" />
+                  <InputError message={addTeamMemberForm.errors.mobile} className="mt-2" />
                 </div>
 
                 {/* Role */}
@@ -228,8 +228,8 @@ export default function TeamMemberManager({ team, availableRoles, userPermission
           <ActionSection
             className="mt-10 sm:mt-0"
             title="Pending Team Invitations"
-            description="These people have been invited to your team and have been sent an invitation email. They may join
-  the team by accepting the email invitation."
+            description="These people have been invited to your team and have been sent an invitation mobile. They may join
+  the team by accepting the mobile invitation."
             content={(
               <div className="space-y-6">
                 {team.team_invitations.map(invitation => (
@@ -238,7 +238,7 @@ export default function TeamMemberManager({ team, availableRoles, userPermission
                     className="flex items-center justify-between"
                   >
                     <div className="text-gray-600 dark:text-gray-400">
-                      {invitation.email}
+                      {invitation.mobile}
                     </div>
 
                     <div className="flex items-center">

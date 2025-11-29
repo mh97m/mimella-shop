@@ -26,13 +26,13 @@ export default function Login({ canResetPassword, status, availableOauthProvider
 
   // Form state
   const passwordForm = useForm({
-    email: 'test@example.com',
+    mobile: 'test@example.com',
     password: 'password',
     remember: false,
   })
 
   const loginLinkForm = useForm({
-    email: '',
+    mobile: '',
   })
 
   // Computed
@@ -118,20 +118,20 @@ export default function Login({ canResetPassword, status, availableOauthProvider
                 <TabsContent value="password" className="space-y-4">
                   <form onSubmit={handlePasswordLogin}>
                     <div className="grid gap-4">
-                      {/* Email */}
+                      {/* Mobile */}
                       <div className="grid gap-2">
-                        <Label htmlFor="email">Email</Label>
+                        <Label htmlFor="mobile">Mobile</Label>
                         <Input
-                          id="email"
-                          type="email"
-                          value={passwordForm.data.email}
-                          onChange={e => passwordForm.setData('email', e.target.value)}
+                          id="mobile"
+                          type="mobile"
+                          value={passwordForm.data.mobile}
+                          onChange={e => passwordForm.setData('mobile', e.target.value)}
                           placeholder="name@example.com"
                           required
                           autoFocus
                           autoComplete="username"
                         />
-                        <InputError message={passwordForm.errors.email} />
+                        <InputError message={passwordForm.errors.mobile} />
                       </div>
 
                       {/* Password */}
@@ -190,16 +190,16 @@ export default function Login({ canResetPassword, status, availableOauthProvider
                   <form onSubmit={handleLoginLink}>
                     <div className="grid gap-4">
                       <div className="grid gap-2">
-                        <Label htmlFor="login-link-email">Email</Label>
+                        <Label htmlFor="login-link-mobile">Mobile</Label>
                         <Input
-                          id="login-link-email"
-                          type="email"
-                          value={loginLinkForm.data.email}
-                          onChange={e => loginLinkForm.setData('email', e.target.value)}
+                          id="login-link-mobile"
+                          type="mobile"
+                          value={loginLinkForm.data.mobile}
+                          onChange={e => loginLinkForm.setData('mobile', e.target.value)}
                           required
                           placeholder="name@example.com"
                         />
-                        <InputError message={loginLinkForm.errors.email} />
+                        <InputError message={loginLinkForm.errors.mobile} />
                       </div>
 
                       <Button

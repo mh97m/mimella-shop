@@ -19,7 +19,7 @@ beforeEach(function (): void {
     $this->socialiteUser->map([
         'id' => '123456789',
         'name' => $this->user->name,
-        'email' => $this->user->email,
+        'mobile' => $this->user->mobile,
         'avatar' => fake()->imageUrl(),
         'user' => [
             'id' => 123456789,

@@ -17,7 +17,7 @@ export default memo(({ user }) => {
   const form = useForm({
     _method: 'PUT',
     name: user.name,
-    email: user.email,
+    mobile: user.mobile,
     photo: null,
   })
 
@@ -43,7 +43,7 @@ export default memo(({ user }) => {
     })
   }
 
-  const sendEmailVerification = () => {
+  const sendMobileVerification = () => {
     setVerificationLinkSent(true)
   }
 
@@ -78,7 +78,7 @@ export default memo(({ user }) => {
     <FormSection
       onSubmit={updateProfileInformation}
       title="Profile Information"
-      description="Update your account's profile information and email address."
+      description="Update your account's profile information and mobile address."
       form={(
         <>
           {/* Profile Photo */}
@@ -150,39 +150,39 @@ export default memo(({ user }) => {
             <InputError message={form.errors.name} className="mt-2" />
           </div>
 
-          {/* Email */}
+          {/* Mobile */}
           <div className="col-span-6 sm:col-span-4">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="mobile">Mobile</Label>
             <Input
-              id="email"
-              type="email"
-              value={form.data.email}
+              id="mobile"
+              type="mobile"
+              value={form.data.mobile}
               disabled
               className="mt-1 block w-full"
               required
               autoComplete="username"
             />
-            <InputError message={form.errors.email} className="mt-2" />
+            <InputError message={form.errors.mobile} className="mt-2" />
 
-            {jetstream.hasEmailVerification && !user.email_verified_at && (
+            {jetstream.hasMobileVerification && !user.mobile_verified_at && (
               <div>
                 <p className="mt-2 text-sm">
-                  Your email address is unverified.
+                  Your mobile address is unverified.
                   <Link
                     href={route('verification.send')}
                     method="post"
                     type="button"
                     as="button"
-                    onClick={sendEmailVerification}
+                    onClick={sendMobileVerification}
                     className="rounded-md text-sm underline focus:outline-hidden focus:ring-2 focus:ring-offset-2"
                   >
-                    Click here to re-send the verification email.
+                    Click here to re-send the verification mobile.
                   </Link>
                 </p>
 
                 {verificationLinkSent && (
                   <div className="mt-2 text-sm font-medium">
-                    A new verification link has been sent to your email address.
+                    A new verification link has been sent to your mobile address.
                   </div>
                 )}
               </div>

@@ -11,7 +11,7 @@ use Laravel\Jetstream\TeamInvitation as JetstreamTeamInvitation;
 /**
  * @property int $id
  * @property int $team_id
- * @property string $email
+ * @property string $mobile
  * @property string|null $role
  * @property CarbonImmutable|null $created_at
  * @property CarbonImmutable|null $updated_at
@@ -21,7 +21,7 @@ use Laravel\Jetstream\TeamInvitation as JetstreamTeamInvitation;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamInvitation newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamInvitation query()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamInvitation whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamInvitation whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamInvitation whereMobile($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamInvitation whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamInvitation whereRole($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamInvitation whereTeamId($value)
@@ -37,7 +37,7 @@ final class TeamInvitation extends JetstreamTeamInvitation
      * @var list<string>
      */
     protected $fillable = [
-        'email',
+        'mobile',
         'role',
     ];
 

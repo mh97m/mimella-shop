@@ -8,7 +8,7 @@ import { route } from 'ziggy-js'
 
 export default memo(({ status }) => {
   useSeoMetaTags({
-    title: 'Email Verification',
+    title: 'Mobile Verification',
   })
 
   const form = useForm({})
@@ -28,19 +28,19 @@ export default memo(({ status }) => {
             <AuthenticationCardLogo />
           </CardTitle>
           <CardDescription className="text-center text-2xl">
-            Verify your email
+            Verify your mobile
           </CardDescription>
         </CardHeader>
 
         <CardContent>
           <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-            Before continuing, could you verify your email address by clicking on the link we just emailed to
-            you? If you didn't receive the email, we will gladly send you another.
+            Before continuing, could you verify your mobile address by clicking on the link we just mobileed to
+            you? If you didn't receive the mobile, we will gladly send you another.
           </div>
 
           {verificationLinkSent && (
             <div className="mb-4 text-sm font-medium text-green-600 dark:text-green-400">
-              A new verification link has been sent to the email address you provided in your profile settings.
+              A new verification link has been sent to the mobile address you provided in your profile settings.
             </div>
           )}
 
@@ -50,7 +50,7 @@ export default memo(({ status }) => {
                 className={form.processing ? 'opacity-25' : ''}
                 disabled={form.processing}
               >
-                Resend Verification Email
+                Resend Verification Mobile
               </Button>
 
               <div>

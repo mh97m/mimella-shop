@@ -13,7 +13,7 @@ test('team members can be invited to team', function (): void {
     $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 
     $this->post('/teams/'.$user->currentTeam->id.'/members', [
-        'email' => 'test@example.com',
+        'mobile' => 'test@example.com',
         'role' => 'admin',
     ]);
 
@@ -28,7 +28,7 @@ test('team member invitations can be cancelled', function (): void {
     $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 
     $invitation = $user->currentTeam->teamInvitations()->create([
-        'email' => 'test@example.com',
+        'mobile' => 'test@example.com',
         'role' => 'admin',
     ]);
 

@@ -29,14 +29,14 @@ final class CreateNewUser implements CreatesNewUsers
     {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'mobile' => ['required', 'string', 'mobile', 'max:255', 'unique:users'],
             'password' => Arr::get($input, 'password') ? $this->passwordRules() : 'sometimes',
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
 
         return DB::transaction(fn () => tap(User::query()->create([
             'name' => $input['name'],
-            'email' => $input['email'],
+            'mobile' => $input['mobile'],
             'password' => Arr::get($input, 'password') ? Hash::make($input['password']) : Str::random(12),
         ]), function (User $user): void {
             $this->createTeam($user);

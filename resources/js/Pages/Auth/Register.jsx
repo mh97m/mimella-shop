@@ -19,7 +19,7 @@ export default memo(() => {
 
   const form = useForm({
     name: '',
-    email: '',
+    mobile: '',
     password: '',
     password_confirmation: '',
     terms: false,
@@ -62,16 +62,16 @@ export default memo(() => {
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="mobile">Mobile</Label>
                 <Input
-                  id="email"
-                  type="email"
-                  value={form.data.email}
-                  onChange={e => form.setData('email', e.target.value)}
+                  id="mobile"
+                  type="mobile"
+                  value={form.data.mobile}
+                  onChange={e => form.setData('mobile', e.target.value)}
                   required
                   autoComplete="username"
                 />
-                <InputError message={form.errors.email} />
+                <InputError message={form.errors.mobile} />
               </div>
 
               <div className="grid gap-2">

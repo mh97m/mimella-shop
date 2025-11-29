@@ -81,7 +81,7 @@ final class OauthConnectionFactory extends Factory
             'company' => '@'.fake()->company(),
             'blog' => fake()->url(),
             'location' => fake()->city().', '.fake()->country(),
-            'email' => fake()->safeEmail(),
+            'mobile' => fake()->safeMobile(),
             'hireable' => fake()->boolean(),
             'bio' => fake()->sentence(),
             'twitter_username' => fake()->userName(),

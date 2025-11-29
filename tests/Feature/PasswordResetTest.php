@@ -19,7 +19,7 @@ test('reset password link can be requested', function (): void {
     $user = User::factory()->create();
 
     $response = $this->post('/forgot-password', [
-        'email' => $user->email,
+        'mobile' => $user->mobile,
     ]);
 
     Notification::assertSentTo($user, ResetPassword::class);
@@ -31,7 +31,7 @@ test('reset password screen can be rendered', function (): void {
     $user = User::factory()->create();
 
     $response = $this->post('/forgot-password', [
-        'email' => $user->email,
+        'mobile' => $user->mobile,
     ]);
 
     Notification::assertSentTo($user, ResetPassword::class, function (object $notification): true {
@@ -49,13 +49,13 @@ test('password can be reset with valid token', function (): void {
     $user = User::factory()->create();
 
     $response = $this->post('/forgot-password', [
-        'email' => $user->email,
+        'mobile' => $user->mobile,
     ]);
 
     Notification::assertSentTo($user, ResetPassword::class, function (object $notification) use ($user): true {
         $response = $this->post('/reset-password', [
             'token' => $notification->token,
-            'email' => $user->email,
+            'mobile' => $user->mobile,
             'password' => 'password',
             'password_confirmation' => 'password',
         ]);

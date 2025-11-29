@@ -42,7 +42,7 @@ final readonly class HandleOauthCallbackAction
     {
         return DB::transaction(function () use ($provider, $socialiteUser): User {
             $existingUser = User::query()
-                ->whereEmail($socialiteUser->getEmail())
+                ->whereMobile($socialiteUser->getMobile())
                 ->first();
 
             return match (true) {
@@ -58,7 +58,7 @@ final readonly class HandleOauthCallbackAction
             Validator::validate([
                 'provider' => $provider,
                 'provider_id' => $socialiteUser->getId(),
-                'email' => $socialiteUser->getEmail(),
+                'mobile' => $socialiteUser->getMobile(),
             ], [
                 'provider' => [
                     'required',
@@ -68,13 +68,13 @@ final readonly class HandleOauthCallbackAction
                             ->where('provider_id', $socialiteUser->getId())
                     ),
                 ],
-                'email' => ['required', 'email', Rule::in([$user->email])],
+                'mobile' => ['required', 'mobile', Rule::in([$user->mobile])],
             ], [
                 'provider.unique' => __('This account from :provider is already connected to another account.', ['provider' => $provider]),
-                'email.in' => __('The email address from this :provider does not match your account email.', ['provider' => $provider]),
+                'mobile.in' => __('The mobile address from this :provider does not match your account mobile.', ['provider' => $provider]),
             ]);
         } catch (ValidationException) {
-            throw_if($socialiteUser->getEmail() !== $user->email, OAuthAccountLinkingException::emailMismatch($provider));
+            throw_if($socialiteUser->getMobile() !== $user->mobile, OAuthAccountLinkingException::mobileMismatch($provider));
 
             throw new InvalidArgumentException(__('Validation error try again later.'));
         }
@@ -96,7 +96,7 @@ final readonly class HandleOauthCallbackAction
     {
         $user = (new CreateNewUser())->create([
             'name' => (string) $socialiteUser->getName(),
-            'email' => (string) $socialiteUser->getEmail(),
+            'mobile' => (string) $socialiteUser->getMobile(),
             'terms' => (string) true,
         ]);
 

@@ -45,7 +45,7 @@ export default function UpdateTeamNameForm({ team, permissions }) {
 
               <div className="ms-4 leading-tight">
                 <div>{team.owner.name}</div>
-                <div className="text-sm">{team.owner.email}</div>
+                <div className="text-sm">{team.owner.mobile}</div>
               </div>
             </div>
           </div>

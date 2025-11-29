@@ -45,7 +45,7 @@ describe('oauth connection model tests', function (): void {
                 ->data->toHaveKeys([
                     'id',
                     'name',
-                    'email',
+                    'mobile',
                 ]);
         }
     });

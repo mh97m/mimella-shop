@@ -58,6 +58,6 @@ test('dashboard has required shared data', function (): void {
             ->has('auth')
             ->has('auth.user')
             ->has('auth.user.name')
-            ->has('auth.user.email')
+            ->has('auth.user.mobile')
     );
 });

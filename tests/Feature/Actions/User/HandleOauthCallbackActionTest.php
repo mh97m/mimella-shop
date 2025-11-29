@@ -16,7 +16,7 @@ beforeEach(function (): void {
             'id' => '12345',
             'nickname' => 'johndoe',
             'name' => 'John Doe',
-            'email' => 'john@example.com',
+            'mobile' => 'john@example.com',
             'avatar' => 'https://example.com/avatar.jpg',
             'token' => 'oauth-token',
             'refreshToken' => 'refresh-token',
@@ -31,7 +31,7 @@ test('it creates new user when handling unauthenticated user', function (): void
     expect($result)
         ->toBeInstanceOf(User::class)
         ->and($result->name)->toBe('John Doe')
-        ->and($result->email)->toBe('john@example.com');
+        ->and($result->mobile)->toBe('john@example.com');
 
     assertDatabaseHas('oauth_connections', [
         'user_id' => $result->id,
@@ -40,8 +40,8 @@ test('it creates new user when handling unauthenticated user', function (): void
     ]);
 });
 
-test('it links oauth account to authenticated user with matching email', function (): void {
-    $user = User::factory()->create(['email' => 'john@example.com']);
+test('it links oauth account to authenticated user with matching mobile', function (): void {
+    $user = User::factory()->create(['mobile' => 'john@example.com']);
 
     $result = (new HandleOauthCallbackAction())->handle('github', $this->socialiteUser, $user);
 
@@ -54,19 +54,19 @@ test('it links oauth account to authenticated user with matching email', functio
     ]);
 });
 
-test('it throws exception when emails do not match for authenticated user', function (): void {
-    $user = User::factory()->create(['email' => 'different@example.com']);
+test('it throws exception when mobiles do not match for authenticated user', function (): void {
+    $user = User::factory()->create(['mobile' => 'different@example.com']);
 
     expect(fn (): User => (new HandleOauthCallbackAction())->handle('github', $this->socialiteUser, $user))
         ->toThrow(
             OAuthAccountLinkingException::class,
-            'The email address from this github does not match your account email.'
+            'The mobile address from this github does not match your account mobile.'
         );
 });
 
 test('it throws exception when oauth connection exists for different user', function (): void {
     $existingUser = User::factory()->create();
-    $newUser = User::factory()->create(['email' => 'john@example.com']);
+    $newUser = User::factory()->create(['mobile' => 'john@example.com']);
 
     OauthConnection::factory()->create([
         'user_id' => $existingUser->id,
@@ -79,7 +79,7 @@ test('it throws exception when oauth connection exists for different user', func
 });
 
 test('it throws exception when trying to connect to existing user without oauth connection', function (): void {
-    User::factory()->create(['email' => 'john@example.com']);
+    User::factory()->create(['mobile' => 'john@example.com']);
 
     expect(fn (): User => (new HandleOauthCallbackAction())->handle('github', $this->socialiteUser))
         ->toThrow(
@@ -89,7 +89,7 @@ test('it throws exception when trying to connect to existing user without oauth 
 });
 
 test('it handles existing user with oauth connection', function (): void {
-    $user = User::factory()->create(['email' => 'john@example.com']);
+    $user = User::factory()->create(['mobile' => 'john@example.com']);
 
     OauthConnection::factory()->create([
         'user_id' => $user->id,

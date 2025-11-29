@@ -25,7 +25,7 @@ beforeEach(function (): void {
             'id' => '1',
             'nickname' => 'test',
             'name' => 'Test User',
-            'email' => 'test@test.com',
+            'mobile' => 'test@test.com',
             'avatar' => 'https://github.com/avatar.jpg',
             'user' => ['id' => '123456'],
             'token' => 'test-token',
@@ -89,7 +89,7 @@ test('it handles oauth callback for new user without authenticated user', functi
 });
 
 test('it handles oauth callback for existing user without authenticated user', function (): void {
-    User::factory()->create(['email' => 'test@test.com']);
+    User::factory()->create(['mobile' => 'test@test.com']);
     mockSocialiteForCallback();
 
     assertDatabaseCount('oauth_connections', 0);
@@ -105,7 +105,7 @@ test('it handles oauth callback for existing user without authenticated user', f
 });
 
 test('it handles oauth callback for existing user without authenticated user and other provider', function (): void {
-    $user = User::factory()->create(['email' => 'test@test.com']);
+    $user = User::factory()->create(['mobile' => 'test@test.com']);
     mockSocialiteForCallback();
     $existingConnection = OauthConnection::factory()
         ->for($user)
@@ -136,7 +136,7 @@ test('it handles invalid state exception without authenticated user', function (
 });
 
 test('it handles oauth callback with existing connection and without authenticated user', function (): void {
-    $user = User::factory()->create(['email' => 'test@test.com']);
+    $user = User::factory()->create(['mobile' => 'test@test.com']);
     mockSocialiteForCallback();
 
     $existingConnection = OauthConnection::factory()
@@ -163,8 +163,8 @@ test('it handles oauth callback with existing connection and without authenticat
         ->and($connection->refresh_token)->toBe('test-refresh-token');
 });
 
-test('it handles linking account with same email for authenticated user', function (): void {
-    $user = User::factory()->create(['email' => 'test@test.com']);
+test('it handles linking account with same mobile for authenticated user', function (): void {
+    $user = User::factory()->create(['mobile' => 'test@test.com']);
     mockSocialiteForCallback();
 
     assertDatabaseCount('oauth_connections', 0);
@@ -179,8 +179,8 @@ test('it handles linking account with same email for authenticated user', functi
     assertDatabaseCount('users', 1);
 });
 
-test('it handles oauth callback with mismatched emails for authenticated user', function (): void {
-    $user = User::factory()->create(['email' => 'different@example.com']);
+test('it handles oauth callback with mismatched mobiles for authenticated user', function (): void {
+    $user = User::factory()->create(['mobile' => 'different@example.com']);
     mockSocialiteForCallback();
 
     assertDatabaseCount('oauth_connections', 0);
@@ -189,7 +189,7 @@ test('it handles oauth callback with mismatched emails for authenticated user', 
     $response = actingAs($user)
         ->get(route('oauth.callback', ['provider' => 'github']))
         ->assertRedirect(route('profile.show'))
-        ->assertSessionHas('error', 'The email address from this github does not match your account email.');
+        ->assertSessionHas('error', 'The mobile address from this github does not match your account mobile.');
 
     assertDatabaseCount('oauth_connections', 0);
     assertDatabaseCount('users', 1);

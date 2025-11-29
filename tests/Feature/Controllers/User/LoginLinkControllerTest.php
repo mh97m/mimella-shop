@@ -30,10 +30,10 @@ beforeEach(function (): void {
 
 describe('can create login link', function (): void {
     it('creates login link and sends notification', function (): void {
-        $user = User::factory()->create(['email' => 'test@example.com']);
+        $user = User::factory()->create(['mobile' => 'test@example.com']);
 
         $response = post(route('login-link.store'), [
-            'email' => $user->email,
+            'mobile' => $user->mobile,
         ]);
 
         $response->assertRedirect()
@@ -48,35 +48,35 @@ describe('can create login link', function (): void {
         Notification::assertCount(1);
     });
 
-    it('validates email exists', function (): void {
+    it('validates mobile exists', function (): void {
         $response = post(route('login-link.store'), [
-            'email' => 'nonexistent@example.com',
+            'mobile' => 'nonexistent@example.com',
         ]);
 
-        $response->assertSessionHasErrors(['email']);
+        $response->assertSessionHasErrors(['mobile']);
         assertDatabaseCount('login_links', 0);
         Notification::assertNothingSent();
     });
 
-    it('requires valid email format', function (): void {
+    it('requires valid mobile format', function (): void {
         $response = post(route('login-link.store'), [
-            'email' => 'invalid-email',
+            'mobile' => 'invalid-mobile',
         ]);
 
-        $response->assertSessionHasErrors(['email']);
+        $response->assertSessionHasErrors(['mobile']);
         assertDatabaseCount('login_links', 0);
         Notification::assertNothingSent();
     });
 
     it('rate limits requests', function (): void {
-        $user = User::factory()->create(['email' => 'test@example.com']);
+        $user = User::factory()->create(['mobile' => 'test@example.com']);
 
         // First request should succeed
-        post(route('login-link.store'), ['email' => $user->email])
+        post(route('login-link.store'), ['mobile' => $user->mobile])
             ->assertSessionHas('success');
 
         // Second request within 1 minute should fail
-        post(route('login-link.store'), ['email' => $user->email])
+        post(route('login-link.store'), ['mobile' => $user->mobile])
             ->assertSessionHas('error');
 
         assertDatabaseCount('login_links', 1);
@@ -89,7 +89,7 @@ describe('can login with the link', function (): void {
 
         Str::createRandomStringsUsing(fn (): string => 'fake-random-string');
         post(route('login-link.store'), [
-            'email' => $user->email,
+            'mobile' => $user->mobile,
         ]);
 
         Str::createRandomStringsNormally();

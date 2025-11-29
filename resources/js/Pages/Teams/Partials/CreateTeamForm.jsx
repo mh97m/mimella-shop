@@ -46,7 +46,7 @@ export default function CreateTeamForm() {
                   {user.name}
                 </div>
                 <div className="text-sm text-gray-700 dark:text-gray-300">
-                  {user.email}
+                  {user.mobile}
                 </div>
               </div>
             </div>

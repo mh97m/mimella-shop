@@ -40,7 +40,7 @@ export default memo(() => {
           </Avatar>
           <div className="grid flex-1 text-left text-sm leading-tight">
             <span className="truncate font-semibold">{auth?.user?.name}</span>
-            <span className="truncate text-xs">{auth?.user?.email}</span>
+            <span className="truncate text-xs">{auth?.user?.mobile}</span>
           </div>
           <Icon icon="lucide:chevrons-up-down" className="ml-auto size-4" />
         </SidebarMenuButton>
@@ -64,7 +64,7 @@ export default memo(() => {
             </Avatar>
             <div className="grid flex-1 text-left text-sm leading-tight">
               <span className="truncate font-semibold">{auth?.user?.name}</span>
-              <span className="truncate text-xs">{auth?.user?.email}</span>
+              <span className="truncate text-xs">{auth?.user?.mobile}</span>
             </div>
           </div>
         </DropdownMenuLabel>

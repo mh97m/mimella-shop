@@ -48,7 +48,7 @@ test('admin can list all users', function (): void {
                 ->first(
                     fn ($json) => $json->where('id', $this->admin->id)
                         ->where('name', $this->admin->name)
-                        ->where('email', $this->admin->email)
+                        ->where('mobile', $this->admin->mobile)
                         ->etc()
                 )
         );
@@ -59,7 +59,7 @@ test('admin can create new user', function (): void {
 
     $userData = [
         'name' => 'Test User',
-        'email' => 'test@example.com',
+        'mobile' => 'test@example.com',
         'password' => 'password123',
         'password_confirmation' => 'password123',
     ];
@@ -69,7 +69,7 @@ test('admin can create new user', function (): void {
     $response->assertCreated()
         ->assertJson(
             fn (AssertableJson $json): AssertableJson => $json->where('name', $userData['name'])
-                ->where('email', $userData['email'])
+                ->where('mobile', $userData['mobile'])
                 ->etc()
         );
 });
@@ -83,7 +83,7 @@ test('admin can view specific user', function (): void {
         ->assertJson(
             fn (AssertableJson $json): AssertableJson => $json->where('id', $this->writer->id)
                 ->where('name', $this->writer->name)
-                ->where('email', $this->writer->email)
+                ->where('mobile', $this->writer->mobile)
                 ->etc()
         );
 });
@@ -93,7 +93,7 @@ test('admin can update user', function (): void {
 
     $updateData = [
         'name' => 'Updated Name',
-        'email' => 'updated@example.com',
+        'mobile' => 'updated@example.com',
     ];
 
     $response = $this->putJson("/api/user/{$this->writer->id}", $updateData);
@@ -101,7 +101,7 @@ test('admin can update user', function (): void {
     $response->assertOk()
         ->assertJson(
             fn (AssertableJson $json): AssertableJson => $json->where('name', $updateData['name'])
-                ->where('email', $updateData['email'])
+                ->where('mobile', $updateData['mobile'])
                 ->etc()
         );
 });
@@ -145,7 +145,7 @@ test('token abilities are properly checked', function (): void {
     Sanctum::actingAs($this->admin, ['read']);
     $response = $this->postJson('/api/user', [
         'name' => 'Test User',
-        'email' => 'test@example.com',
+        'mobile' => 'test@example.com',
         'password' => 'password123',
         'password_confirmation' => 'password123',
     ]);
@@ -155,7 +155,7 @@ test('token abilities are properly checked', function (): void {
     Sanctum::actingAs($this->admin, ['create']);
     $response = $this->postJson('/api/user', [
         'name' => 'Test User',
-        'email' => 'test@example.com',
+        'mobile' => 'test@example.com',
         'password' => 'password123',
         'password_confirmation' => 'password123',
     ]);

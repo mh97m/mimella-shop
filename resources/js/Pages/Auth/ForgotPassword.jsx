@@ -15,12 +15,12 @@ export default memo(({ status }) => {
   })
 
   const form = useForm({
-    email: '',
+    mobile: '',
   })
 
   const submit = (e) => {
     e.preventDefault()
-    form.post(route('password.email'))
+    form.post(route('password.mobile'))
   }
 
   return (
@@ -37,7 +37,7 @@ export default memo(({ status }) => {
 
         <CardContent>
           <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-            Forgot your password? No problem. Just let us know your email address and we will email you a
+            Forgot your password? No problem. Just let us know your mobile address and we will mobile you a
             password reset link that will allow you to choose a new one.
           </div>
 
@@ -49,18 +49,18 @@ export default memo(({ status }) => {
 
           <form onSubmit={submit}>
             <div>
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="mobile">Mobile</Label>
               <Input
-                id="email"
-                type="email"
-                value={form.data.email}
-                onChange={e => form.setData('email', e.target.value)}
+                id="mobile"
+                type="mobile"
+                value={form.data.mobile}
+                onChange={e => form.setData('mobile', e.target.value)}
                 className="mt-1 block w-full"
                 required
                 autoFocus
                 autoComplete="username"
               />
-              <InputError className="mt-2" message={form.errors.email} />
+              <InputError className="mt-2" message={form.errors.mobile} />
             </div>
 
             <div className="mt-4 flex items-center justify-end">
@@ -68,7 +68,7 @@ export default memo(({ status }) => {
                 className={form.processing ? 'opacity-25' : ''}
                 disabled={form.processing}
               >
-                Email Password Reset Link
+                Mobile Password Reset Link
               </Button>
             </div>
           </form>

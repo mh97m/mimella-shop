@@ -31,11 +31,11 @@ final class LoginLinkController extends Controller
     {
         /** @var array<string, string> $validated */
         $validated = $request->validate([
-            'email' => ['required', 'email', 'exists:users,email'],
+            'mobile' => ['required', 'mobile', 'exists:users,mobile'],
         ]);
 
-        $email = $validated['email'];
-        $key = self::RATE_LIMIT_PREFIX.$email;
+        $mobile = $validated['mobile'];
+        $key = self::RATE_LIMIT_PREFIX.$mobile;
 
         // Rate limit check - 1 attempt per minute
         if (RateLimiter::tooManyAttempts($key, self::RATE_LIMIT_ATTEMPTS)) {
@@ -46,7 +46,7 @@ final class LoginLinkController extends Controller
             return redirect()->back();
         }
 
-        $user = User::query()->where('email', $email)->firstOrFail();
+        $user = User::query()->where('mobile', $mobile)->firstOrFail();
 
         // Increment the rate limiter
         RateLimiter::increment($key);
@@ -59,7 +59,7 @@ final class LoginLinkController extends Controller
 
         defer(fn () => $user->notify(new LoginLinkMail($magicLink)), 'login-link-notification');
 
-        session()->flash('success', __('Magic link sent to your email!'));
+        session()->flash('success', __('Magic link sent to your mobile!'));
 
         return redirect()->back();
     }

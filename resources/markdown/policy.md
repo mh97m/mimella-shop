@@ -4,7 +4,7 @@ At LaraSonic, we value your privacy. This policy outlines how we collect, use, a
 
 ### 1. Information We Collect
 
-We may collect personal information such as your name, email address, and usage data when you use our services.
+We may collect personal information such as your name, mobile address, and usage data when you use our services.
 
 ### 2. How We Use Your Information
 

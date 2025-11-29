@@ -42,12 +42,12 @@ final class UserResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->placeholder('Enter full name'),
-                        Forms\Components\TextInput::make('email')
-                            ->email()
+                        Forms\Components\TextInput::make('mobile')
+                            ->mobile()
                             ->required()
                             ->unique(ignoreRecord: true)
                             ->maxLength(255)
-                            ->placeholder('email@example.com'),
+                            ->placeholder('mobile@example.com'),
                         Forms\Components\TextInput::make('password')
                             ->password()
                             ->required()
@@ -66,11 +66,11 @@ final class UserResource extends Resource
                     ->searchable()
                     ->sortable(),
 
-                Tables\Columns\TextColumn::make('email')
+                Tables\Columns\TextColumn::make('mobile')
                     ->searchable()
                     ->sortable(),
 
-                Tables\Columns\TextColumn::make('email_verified_at')
+                Tables\Columns\TextColumn::make('mobile_verified_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

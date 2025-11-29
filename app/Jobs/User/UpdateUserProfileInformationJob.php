@@ -40,7 +40,7 @@ final class UpdateUserProfileInformationJob implements ShouldQueue
         ]);
 
         $user->profile_photo_path = $socialiteUser->getAvatar();
-        $user->email_verified_at ??= now();
+        $user->mobile_verified_at ??= now();
         $user->save();
     }
 }
