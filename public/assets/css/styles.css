@@ -1,6 +1,6 @@
 :root {
-  --brand: #ff693b;
-  --brand-2: #fdcd5c;
+  --brand: #e46ac7ff;
+  --brand-2: #e46ac871;
   --transition-fast: 0.15s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.6s ease;
@@ -202,8 +202,8 @@
 
 
 [data-theme="light"] {
-  --brand: #ff693b;
-  --brand-2: #fdcd5c;
+  --brand: #e46ac7ff;
+  --brand-2: #e46ac871;
   background: #ffffff;
   color: #212529;
 }

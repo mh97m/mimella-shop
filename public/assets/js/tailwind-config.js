@@ -4,8 +4,8 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        brand: '#ff693b',
-        'brand-2': '#fdcd5c',
+        brand: '#e46ac7ff',
+        'brand-2': '#e46ac871',
         muted: {
           DEFAULT: '#a7a7b4',
           dark: '#a7a7b4',

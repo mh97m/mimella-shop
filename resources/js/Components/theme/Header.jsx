@@ -17,10 +17,10 @@ export default memo(() => {
                         />
                         <div>
                             <div className="text-sm text-muted-light dark:text-muted-dark">
-                                C l i c k l y
+                                M i m e l l a
                             </div>
                             <div className="text-lg font-extrabold">
-                                فروشگاه تو!
+                                میملا شاپ
                             </div>
                         </div>
                     </div>
@@ -40,21 +40,6 @@ export default memo(() => {
                             0
                         </span>
                         سبد
-                    </button>
-                    <button
-                        className="flex flex-col px-3 pt-3 pb-2 rounded-xl hover:bg-gray-50 dark:hover:bg-card/60 transition-all"
-                        id="themeToggle"
-                        title="تغییر حالت"
-                    >
-                        🌙
-                    </button>
-                    <button
-                        className="flex flex-col gap-1 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-card/60"
-                        id="hamburgerBtn"
-                    >
-                        <div className="w-5 h-0.5 bg-gray-900 dark:bg-white rounded"></div>
-                        <div className="w-5 h-0.5 bg-gray-900 dark:bg-white rounded"></div>
-                        <div className="w-5 h-0.5 bg-gray-900 dark:bg-white rounded"></div>
                     </button>
                 </div>
             </div>
