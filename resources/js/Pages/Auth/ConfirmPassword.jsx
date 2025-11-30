@@ -1,80 +1,105 @@
-import InputError from '@/Components/InputError'
-import AuthenticationCardLogo from '@/Components/LogoRedirect'
-import { Button } from '@/Components/shadcn/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/Components/shadcn/ui/card'
-import { Input } from '@/Components/shadcn/ui/input'
-import { Label } from '@/Components/shadcn/ui/label'
-import { useSeoMetaTags } from '@/Composables/useSeoMetaTags'
-import { useForm } from '@inertiajs/react'
-import { memo, useRef } from 'react'
-import { route } from 'ziggy-js'
+import InputError from "@/Components/InputError";
+import AuthenticationCardLogo from "@/Components/LogoRedirect";
+import { Button } from "@/Components/shadcn/ui/button";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from "@/Components/shadcn/ui/card";
+import { toast, Toaster } from "sonner";
+import { Input } from "@/Components/shadcn/ui/input";
+import { Label } from "@/Components/shadcn/ui/label";
+import { useSeoMetaTags } from "@/Composables/useSeoMetaTags";
+import { useForm } from "@inertiajs/react";
+import { memo, useRef } from "react";
+import { route } from "ziggy-js";
 
 export default memo(() => {
-  useSeoMetaTags({
-    title: 'Confirm Password',
-  })
+    useSeoMetaTags({
+        title: "Confirm Password",
+    });
 
-  const form = useForm({
-    password: '',
-  })
+    const form = useForm({
+        password: "",
+    });
 
-  const passwordInput = useRef(null)
+    const passwordInput = useRef(null);
 
-  const submit = (e) => {
-    e.preventDefault()
-    form.post(route('password.confirm'), {
-      onFinish: () => {
-        form.reset()
-        passwordInput.current?.focus()
-      },
-    })
-  }
+    const submit = (e) => {
+        e.preventDefault();
+        form.post(route("password.confirm"), {
+            onFinish: () => {
+                form.reset();
+                passwordInput.current?.focus();
+            },
+        });
+    };
 
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
-      <Card className="mx-auto max-w-lg">
-        <CardHeader>
-          <CardTitle className="flex justify-center">
-            <AuthenticationCardLogo />
-          </CardTitle>
-          <CardDescription className="text-center text-2xl">
-            Confirm your password
-          </CardDescription>
-        </CardHeader>
+    return (
+        <main className="max-w-7xl mx-auto py-4 pb-20 min-h-[calc(100vh-3.5rem)] px-0 mx-0 pr-4">
+            <Toaster position="top-center" />
 
-        <CardContent>
-          <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-            This is a secure area of the application. Please confirm your password before continuing.
-          </div>
+            <div className="flex items-center justify-center px-1 pl-4 min-h-screen">
+                <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow rounded-2xl p-6 space-y-6 text-center">
+                    {/* LOGO */}
+                    <div className="flex justify-center">
+                        <div className="w-20 h-20 flex items-center justify-center rounded-lg">
+                            <img
+                                className="rounded-md shadow-md grid place-items-center"
+                                src="assets/imgs/logo.png"
+                                alt="Clickly"
+                            />
+                        </div>
+                    </div>
 
-          <form onSubmit={submit}>
-            <div className="grid gap-4">
-              <div className="grid gap-2">
-                <Label htmlFor="password">Password</Label>
-                <Input
-                  id="password"
-                  ref={passwordInput}
-                  type="password"
-                  value={form.data.password}
-                  onChange={e => form.setData('password', e.target.value)}
-                  required
-                  autoComplete="current-password"
-                  autoFocus
-                />
-                <InputError message={form.errors.password} />
-              </div>
+                    <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                        تأیید رمز عبور
+                    </h2>
 
-              <Button
-                type="submit"
-                className={form.processing ? 'opacity-25' : ''}
-                disabled={form.processing}
-              >
-                Confirm
-              </Button>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-7">
+                        این بخش از سایت امن است؛ لطفاً قبل از ادامه، رمز عبور
+                        خود را وارد کنید.
+                    </p>
+
+                    <form onSubmit={submit} className="space-y-4 text-right">
+                        {/* PASSWORD */}
+                        <div>
+                            <label className="block mb-1 text-sm text-gray-600 dark:text-gray-300">
+                                رمز عبور
+                            </label>
+                            <input
+                                id="password"
+                                ref={passwordInput}
+                                type="password"
+                                value={form.data.password}
+                                onChange={(e) =>
+                                    form.setData("password", e.target.value)
+                                }
+                                className="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-brand-2 focus:border-brand-2 outline-none"
+                                required
+                                autoFocus
+                                autoComplete="current-password"
+                            />
+                            {form.errors.password && (
+                                <p className="text-sm text-red-500 mt-1">
+                                    {form.errors.password}
+                                </p>
+                            )}
+                        </div>
+
+                        {/* SUBMIT */}
+                        <button
+                            type="submit"
+                            disabled={form.processing}
+                            className="block w-full bg-brand text-white font-bold py-3 rounded-xl text-center hover:bg-brand/90 transition disabled:opacity-70"
+                        >
+                            {form.processing ? "در حال تأیید..." : "تأیید"}
+                        </button>
+                    </form>
+                </div>
             </div>
-          </form>
-        </CardContent>
-      </Card>
-    </div>
-  )
-})
+        </main>
+    );
+});

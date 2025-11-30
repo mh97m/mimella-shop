@@ -1,149 +1,234 @@
-import InputError from '@/Components/InputError'
-import AuthenticationCardLogo from '@/Components/LogoRedirect'
-import { Button } from '@/Components/shadcn/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/Components/shadcn/ui/card'
-import { Checkbox } from '@/Components/shadcn/ui/checkbox'
-import { Input } from '@/Components/shadcn/ui/input'
-import { Label } from '@/Components/shadcn/ui/label'
-import { useSeoMetaTags } from '@/Composables/useSeoMetaTags'
-import { Link, useForm, usePage } from '@inertiajs/react'
-import { memo } from 'react'
-import { route } from 'ziggy-js'
+import InputError from "@/Components/InputError";
+import AuthenticationCardLogo from "@/Components/LogoRedirect";
+import { Button } from "@/Components/shadcn/ui/button";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from "@/Components/shadcn/ui/card";
+import { toast, Toaster } from "sonner";
+import { Checkbox } from "@/Components/shadcn/ui/checkbox";
+import { Input } from "@/Components/shadcn/ui/input";
+import { Label } from "@/Components/shadcn/ui/label";
+import { useSeoMetaTags } from "@/Composables/useSeoMetaTags";
+import { Link, useForm, usePage } from "@inertiajs/react";
+import { memo } from "react";
+import { route } from "ziggy-js";
 
 export default memo(() => {
-  const { props: { jetstream } } = usePage()
+    const {
+        props: { jetstream },
+    } = usePage();
 
-  useSeoMetaTags({
-    title: 'Register',
-  })
+    useSeoMetaTags({
+        title: "Register",
+    });
 
-  const form = useForm({
-    name: '',
-    mobile: '',
-    password: '',
-    password_confirmation: '',
-    terms: false,
-  })
+    const form = useForm({
+        name: "",
+        mobile: "",
+        password: "",
+        password_confirmation: "",
+        terms: false,
+    });
 
-  const submit = (e) => {
-    e.preventDefault()
-    form.post(route('register'), {
-      onFinish: () => form.reset('password', 'password_confirmation'),
-    })
-  }
+    const submit = (e) => {
+        e.preventDefault();
+        form.post(route("register"), {
+            onFinish: () => form.reset("password", "password_confirmation"),
+        });
+    };
 
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
-      <Card className="mx-auto max-w-lg">
-        <CardHeader>
-          <CardTitle className="flex justify-center">
-            <AuthenticationCardLogo />
-          </CardTitle>
-          <CardDescription className="text-center text-2xl">
-            Create your account
-          </CardDescription>
-        </CardHeader>
+    return (
+        <main className="max-w-7xl mx-auto py-4 pb-20 min-h-[calc(100vh-3.5rem)] px-0 mx-0 pr-4">
+            <Toaster position="top-center" />
 
-        <CardContent>
-          <form onSubmit={submit}>
-            <div className="grid gap-4">
-              <div className="grid gap-2">
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  id="name"
-                  type="text"
-                  value={form.data.name}
-                  onChange={e => form.setData('name', e.target.value)}
-                  required
-                  autoFocus
-                  autoComplete="name"
-                />
-                <InputError message={form.errors.name} />
-              </div>
+            <div className="flex items-center justify-center px-1 pl-4 min-h-screen">
+                <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow rounded-2xl p-6 space-y-6 text-center">
+                    {/* LOGO */}
+                    <div className="flex justify-center">
+                        <div className="w-20 h-20 flex items-center justify-center rounded-lg">
+                            <img
+                                className="rounded-md shadow-md grid place-items-center"
+                                src="assets/imgs/logo.png"
+                                alt="Clickly"
+                            />
+                        </div>
+                    </div>
 
-              <div className="grid gap-2">
-                <Label htmlFor="mobile">Mobile</Label>
-                <Input
-                  id="mobile"
-                  type="mobile"
-                  value={form.data.mobile}
-                  onChange={e => form.setData('mobile', e.target.value)}
-                  required
-                  autoComplete="username"
-                />
-                <InputError message={form.errors.mobile} />
-              </div>
+                    <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                        ایجاد حساب کاربری
+                    </h2>
 
-              <div className="grid gap-2">
-                <Label htmlFor="password">Password</Label>
-                <Input
-                  id="password"
-                  type="password"
-                  value={form.data.password}
-                  onChange={e => form.setData('password', e.target.value)}
-                  required
-                  autoComplete="new-password"
-                />
-                <InputError message={form.errors.password} />
-              </div>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-7">
+                        اطلاعات خود را وارد کنید تا حساب شما ایجاد شود.
+                    </p>
 
-              <div className="grid gap-2">
-                <Label htmlFor="password_confirmation">Confirm Password</Label>
-                <Input
-                  id="password_confirmation"
-                  type="password"
-                  value={form.data.password_confirmation}
-                  onChange={e => form.setData('password_confirmation', e.target.value)}
-                  required
-                  autoComplete="new-password"
-                />
-                <InputError message={form.errors.password_confirmation} />
-              </div>
+                    <form onSubmit={submit} className="space-y-4 text-right">
+                        {/* NAME */}
+                        <div>
+                            <label className="block mb-1 text-sm text-gray-600 dark:text-gray-300">
+                                نام و نام خانوادگی
+                            </label>
+                            <input
+                                id="name"
+                                type="text"
+                                value={form.data.name}
+                                onChange={(e) =>
+                                    form.setData("name", e.target.value)
+                                }
+                                className="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 focus:ring-2 focus:ring-brand-2 focus:border-brand-2 outline-none"
+                                required
+                                autoFocus
+                                autoComplete="name"
+                            />
+                            {form.errors.name && (
+                                <p className="text-sm text-red-500 mt-1">
+                                    {form.errors.name}
+                                </p>
+                            )}
+                        </div>
 
-              {jetstream?.hasTermsAndPrivacyPolicyFeature && (
-                <div>
-                  <div className="flex items-center space-x-2">
-                    <Checkbox
-                      id="terms"
-                      checked={form.data.terms}
-                      onCheckedChange={checked => form.setData('terms', checked)}
-                      name="terms"
-                      required
-                    />
-                    <label htmlFor="terms" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                      I agree to the
-                      {' '}
-                      <a target="_blank" href={route('terms.show')} className="rounded-md text-sm underline">
-                        Terms of Service
-                      </a>
-                      {' '}
-                      and
-                      {' '}
-                      <a target="_blank" href={route('policy.show')} className="rounded-md text-sm underline">
-                        Privacy Policy
-                      </a>
-                    </label>
-                  </div>
-                  <InputError message={form.errors.terms} />
+                        {/* MOBILE */}
+                        <div>
+                            <label className="block mb-1 text-sm text-gray-600 dark:text-gray-300">
+                                شماره موبایل
+                            </label>
+                            <input
+                                id="mobile"
+                                type="mobile"
+                                value={form.data.mobile}
+                                onChange={(e) =>
+                                    form.setData("mobile", e.target.value)
+                                }
+                                className="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 focus:ring-2 focus:ring-brand-2 focus:border-brand-2 outline-none"
+                                required
+                                autoComplete="username"
+                            />
+                            {form.errors.mobile && (
+                                <p className="text-sm text-red-500 mt-1">
+                                    {form.errors.mobile}
+                                </p>
+                            )}
+                        </div>
+
+                        {/* PASSWORD */}
+                        <div>
+                            <label className="block mb-1 text-sm text-gray-600 dark:text-gray-300">
+                                رمز عبور
+                            </label>
+                            <input
+                                id="password"
+                                type="password"
+                                value={form.data.password}
+                                onChange={(e) =>
+                                    form.setData("password", e.target.value)
+                                }
+                                className="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 focus:ring-2 focus:ring-brand-2 focus:border-brand-2 outline-none"
+                                required
+                                autoComplete="new-password"
+                            />
+                            {form.errors.password && (
+                                <p className="text-sm text-red-500 mt-1">
+                                    {form.errors.password}
+                                </p>
+                            )}
+                        </div>
+
+                        {/* CONFIRM PASS */}
+                        <div>
+                            <label className="block mb-1 text-sm text-gray-600 dark:text-gray-300">
+                                تکرار رمز عبور
+                            </label>
+                            <input
+                                id="password_confirmation"
+                                type="password"
+                                value={form.data.password_confirmation}
+                                onChange={(e) =>
+                                    form.setData(
+                                        "password_confirmation",
+                                        e.target.value,
+                                    )
+                                }
+                                className="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 focus:ring-2 focus:ring-brand-2 focus:border-brand-2 outline-none"
+                                required
+                                autoComplete="new-password"
+                            />
+                            {form.errors.password_confirmation && (
+                                <p className="text-sm text-red-500 mt-1">
+                                    {form.errors.password_confirmation}
+                                </p>
+                            )}
+                        </div>
+
+                        {/* TERMS (Optional) */}
+                        {jetstream?.hasTermsAndPrivacyPolicyFeature && (
+                            <div className="space-y-2">
+                                <label className="flex items-center space-x-2 space-x-reverse cursor-pointer text-sm text-gray-600 dark:text-gray-300">
+                                    <input
+                                        type="checkbox"
+                                        id="terms"
+                                        checked={form.data.terms}
+                                        onChange={(e) =>
+                                            form.setData(
+                                                "terms",
+                                                e.target.checked,
+                                            )
+                                        }
+                                        className="w-4 h-4 rounded border-gray-300 dark:border-gray-700"
+                                        required
+                                    />
+                                    <span>
+                                        با{" "}
+                                        <a
+                                            target="_blank"
+                                            href={route("terms.show")}
+                                            className="text-brand underline"
+                                        >
+                                            قوانین استفاده
+                                        </a>{" "}
+                                        و{" "}
+                                        <a
+                                            target="_blank"
+                                            href={route("policy.show")}
+                                            className="text-brand underline"
+                                        >
+                                            سیاست حفظ حریم خصوصی
+                                        </a>{" "}
+                                        موافقم
+                                    </span>
+                                </label>
+
+                                {form.errors.terms && (
+                                    <p className="text-sm text-red-500 mt-1">
+                                        {form.errors.terms}
+                                    </p>
+                                )}
+                            </div>
+                        )}
+
+                        {/* SUBMIT + LOGIN LINK */}
+                        <div className="flex items-center justify-between pt-2">
+                            <a
+                                href={route("login")}
+                                className="text-sm text-gray-600 dark:text-gray-300 hover:underline"
+                            >
+                                قبلاً ثبت‌نام کرده‌اید؟
+                            </a>
+
+                            <button
+                                type="submit"
+                                disabled={form.processing}
+                                className="bg-brand text-white font-bold py-3 px-6 rounded-xl hover:bg-brand/90 transition disabled:opacity-70"
+                            >
+                                {form.processing ? "در حال ثبت..." : "ثبت‌نام"}
+                            </button>
+                        </div>
+                    </form>
                 </div>
-              )}
-
-              <div className="flex items-center justify-end gap-4">
-                <Link href={route('login')} className="text-sm underline">
-                  Already registered?
-                </Link>
-
-                <Button
-                  className={form.processing ? 'opacity-25' : ''}
-                  disabled={form.processing}
-                >
-                  Register
-                </Button>
-              </div>
             </div>
-          </form>
-        </CardContent>
-      </Card>
-    </div>
-  )
-})
+        </main>
+    );
+});

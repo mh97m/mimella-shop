@@ -160,6 +160,11 @@ final class User extends Authenticatable implements FilamentUser
         return $this->is_admin;
     }
 
+    public function getFilamentName(): string
+    {
+        return $this->mobile;
+    }
+
     protected static function booted(): void
     {
         self::updated(queueable(function (User $customer): void {
